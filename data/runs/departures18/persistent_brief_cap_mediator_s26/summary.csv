@@ -1,0 +1,7 @@
+institution,organization,organization_a,organization_b,prompt_set,environment,seed,event,contract,type_a,type_b,same_type,winner,awarded,correct_winner,efficient_winner,efficiency,buyer_surplus,supplier_profit,joint_surplus,n_rule_priced_bids,n_tool_fallback_bids,n_rival_price_quotes,n_floor_raised_bids
+mediator,brief_cap,brief_cap,brief_cap,primitives,persistent,26,1,Speed Priority,quality,speed,False,B,True,True,B,0.8872180451127819,65.0,5.799999999999997,70.8,0,0,0,0
+mediator,brief_cap,brief_cap,brief_cap,primitives,persistent,26,2,Speed Priority,quality,speed,False,B,True,True,B,0.8872180451127819,65.0,5.799999999999997,70.8,0,0,0,0
+mediator,brief_cap,brief_cap,brief_cap,primitives,persistent,26,3,Speed Priority,quality,speed,False,A,True,False,B,0.87468671679198,68.0,1.7999999999999972,69.8,0,0,0,0
+mediator,brief_cap,brief_cap,brief_cap,primitives,persistent,26,4,Speed Priority,quality,speed,False,A,True,False,B,0.87468671679198,68.5,1.2999999999999972,69.8,0,0,0,0
+mediator,brief_cap,brief_cap,brief_cap,primitives,persistent,26,5,Speed Priority,quality,speed,False,A,True,False,B,0.87468671679198,69.4,0.3999999999999915,69.8,0,0,0,0
+mediator,brief_cap,brief_cap,brief_cap,primitives,persistent,26,6,Speed Priority,quality,speed,False,B,True,True,B,0.974937343358396,71.5,6.299999999999997,77.8,0,0,0,0

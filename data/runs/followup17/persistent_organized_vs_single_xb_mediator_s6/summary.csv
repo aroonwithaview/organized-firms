@@ -1,0 +1,7 @@
+institution,organization,organization_a,organization_b,prompt_set,environment,seed,event,contract,type_a,type_b,same_type,winner,awarded,correct_winner,efficient_winner,efficiency,buyer_surplus,supplier_profit,joint_surplus,n_rule_priced_bids,n_tool_fallback_bids,n_rival_price_quotes
+mediator,single:organized,single,organized,primitives,persistent,6,1,Quality Priority,speed,quality,False,A,True,False,B,0.7613926603038043,60.0,10.799999999999997,70.8,0,0,0
+mediator,single:organized,single,organized,primitives,persistent,6,2,Quality Priority,speed,quality,False,B,True,True,B,0.9947573598601963,75.5,17.0,92.5,0,0,0
+mediator,single:organized,single,organized,primitives,persistent,6,3,Quality Priority,speed,quality,False,B,True,True,B,0.9947573598601963,77.5,15.0,92.5,0,0,0
+mediator,single:organized,single,organized,primitives,persistent,6,4,Quality Priority,speed,quality,False,B,True,True,B,0.9947573598601963,77.5,15.0,92.5,0,0,0
+mediator,single:organized,single,organized,primitives,persistent,6,5,Quality Priority,speed,quality,False,B,True,True,B,0.9947573598601963,79.0,13.5,92.5,0,0,0
+mediator,single:organized,single,organized,primitives,persistent,6,6,Quality Priority,speed,quality,False,B,True,True,B,0.9947573598601963,79.5,13.0,92.5,0,0,0

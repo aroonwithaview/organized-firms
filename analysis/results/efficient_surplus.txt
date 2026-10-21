@@ -1,0 +1,6 @@
+Efficient surplus per event, data/runs/departures18: runs 640; problems 0; seeds 23-42, events 2-6, both institutions pooled
+  forward          efficient surplus 84.335  joint surplus 76.075  loss 8.259
+  forward_revenue  efficient surplus 84.335  joint surplus 71.912  loss 12.422
+  brief            efficient surplus 84.335  joint surplus 75.754  loss 8.581
+  brief_revenue    efficient surplus 84.335  joint surplus 74.799  loss 9.536
+  forward and forward_revenue face the same efficient surplus in every seed: True

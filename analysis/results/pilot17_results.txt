@@ -1,0 +1,467 @@
+Pilot 17: data/runs/pilot17; runs 140; integrity problems 0; (commit, dirty, source, prompts, env): [('9f1cf25aecb0ebb02dcafb7cd46a2d2844208083', False, '46258eff7f4a97117cc9b4bfb10693be0c7d45ffab3ebd23aaec8d71c142143a', 'primitives', 'persistent'), ('9f1cf25aecb0ebb02dcafb7cd46a2d2844208083', False, '46258eff7f4a97117cc9b4bfb10693be0c7d45ffab3ebd23aaec8d71c142143a', 'primitives', 'random')]
+
+A. Market means per arm (per event; events 2-6 unless noted). n = seeds with a complete run.
+env         inst         arm                 n profit 2-6 profit 1-6 buyer 2-6 joint 2-6 walk-aways
+persistent  mediator     single_a            5      10.23      10.34     72.52     82.74          0
+persistent  mediator     single_b            5      10.17      10.27     70.86     81.03          0
+persistent  mediator     single_norecord     5      14.98      14.56     66.81     81.79          0
+persistent  mediator     organized           5       8.91       9.21     69.83     78.74          0
+persistent  mediator     organized_pass      5      12.04      11.58     71.06     83.11          0
+persistent  buyer_agent  single_a            5       4.10       4.13     69.19     73.29          0
+persistent  buyer_agent  single_b            5       2.33       2.53     69.89     72.22          0
+persistent  buyer_agent  single_norecord     5       4.15       4.07     64.67     68.81          0
+persistent  buyer_agent  organized           5       4.96       5.28     67.46     72.42          0
+persistent  buyer_agent  organized_pass      5       3.74       3.81     70.50     74.24          0
+persistent  buyer_agent  single_revenue      5       2.03       1.97     66.33     68.36          0
+persistent  buyer_agent  organized_revenue   5       3.20       1.78     71.91     75.11          0
+random      mediator     single_a            5       9.91      10.21     69.44     79.34          0
+random      mediator     single_norecord     5       9.37       9.19     65.12     74.50          0
+random      mediator     organized           5       8.23       9.03     68.38     76.61          0
+random      mediator     organized_pass      5       9.37       9.57     68.78     78.14          0
+random      buyer_agent  single_a            5       4.04       4.07     68.50     72.54          0
+random      buyer_agent  single_norecord     5       4.37       4.47     64.97     69.34          0
+random      buyer_agent  organized           5       4.00       3.64     70.92     74.93          0
+random      buyer_agent  organized_pass      5       4.43       4.39     67.39     71.82          0
+
+B. Per-seed differences in market supplier profit per event, events 2-6 (5 values; mean; seeds > 0).
+  persistent  mediator     U' - U (noise)   [+2.74, +2.80, +1.20, +1.36, -8.40]  mean -0.06  sd 4.72  se 2.11  >0: 4/5
+  persistent  mediator     U0 - U           [+4.72, +7.90, +2.80, +8.32, +0.00]  mean +4.75  sd 3.50  se 1.57  >0: 4/5
+  persistent  mediator     O - U            [-2.10, +3.20, -4.20, +1.72, -5.20]  mean -1.32  sd 3.66  se 1.64  >0: 2/5
+  persistent  mediator     O_pass - U       [+5.60, +1.50, -2.38, +11.76, -7.40]  mean +1.82  sd 7.35  se 3.29  >0: 3/5
+  persistent  mediator     O - O_pass       [-7.70, +1.70, -1.82, -10.04, +2.20]  mean -3.13  sd 5.52  se 2.47  >0: 2/5
+  persistent  buyer_agent  U' - U (noise)   [-0.54, +1.00, -4.60, -0.60, -4.10]  mean -1.77  sd 2.45  se 1.10  >0: 1/5
+  persistent  buyer_agent  U0 - U           [+4.93, -0.52, -3.36, -0.61, -0.20]  mean +0.05  sd 3.01  se 1.35  >0: 1/5
+  persistent  buyer_agent  O - U            [+7.61, +0.50, -1.10, +2.60, -5.28]  mean +0.87  sd 4.75  se 2.12  >0: 3/5
+  persistent  buyer_agent  O_pass - U       [+1.11, +2.10, -5.10, -1.40, +1.50]  mean -0.36  sd 2.97  se 1.33  >0: 3/5
+  persistent  buyer_agent  O - O_pass       [+6.50, -1.60, +4.00, +4.00, -6.78]  mean +1.23  sd 5.37  se 2.40  >0: 3/5
+  random      mediator     U0 - U           [-1.60, -0.84, +3.24, -2.46, -1.02]  mean -0.54  sd 2.20  se 0.99  >0: 1/5
+  random      mediator     O - U            [-9.00, -3.34, +3.48, +0.88, -0.40]  mean -1.68  sd 4.77  se 2.13  >0: 2/5
+  random      mediator     O_pass - U       [-3.60, -0.70, -0.50, +1.98, +0.12]  mean -0.54  sd 2.01  se 0.90  >0: 2/5
+  random      mediator     O - O_pass       [-5.40, -2.64, +3.98, -1.10, -0.52]  mean -1.14  sd 3.43  se 1.53  >0: 1/5
+  random      buyer_agent  U0 - U           [-1.02, +0.46, +0.22, +3.55, -1.55]  mean +0.33  sd 1.98  se 0.89  >0: 3/5
+  random      buyer_agent  O - U            [+0.02, -0.14, +1.36, +2.54, -3.98]  mean -0.04  sd 2.46  se 1.10  >0: 3/5
+  random      buyer_agent  O_pass - U       [+0.43, -0.32, +1.30, +1.66, -1.14]  mean +0.39  sd 1.15  se 0.51  >0: 3/5
+  random      buyer_agent  O - O_pass       [-0.41, +0.18, +0.06, +0.88, -2.84]  mean -0.43  sd 1.43  se 0.64  >0: 3/5
+
+C. Mixed markets (persistent): per-seed profit gap X - U per event, both positions averaged.
+  organized:single         mediator     events 2-6 [-2.45, -2.51, -0.40, +3.08, +1.00]  mean -0.26  sd 2.38  se 1.06  >0: 2/5
+  organized:single         mediator     events 1-6 [-1.30, -0.83, -0.08, +2.78, +0.88]  mean +0.29  sd 1.62  se 0.72  >0: 2/5
+  organized:single         mediator     event 1    [+4.45, +7.55, +1.50, +1.30, +0.25]  mean +3.01  sd 2.98  se 1.33  >0: 5/5
+  organized:single         buyer_agent  events 2-6 [+3.70, +0.25, +1.29, +1.60, +1.55]  mean +1.68  sd 1.26  se 0.56  >0: 5/5
+  organized:single         buyer_agent  events 1-6 [+2.83, +0.21, +1.37, +1.55, +1.58]  mean +1.51  sd 0.93  se 0.42  >0: 5/5
+  organized:single         buyer_agent  event 1    [-1.50, +0.00, +1.80, +1.30, +1.75]  mean +0.67  sd 1.41  se 0.63  >0: 3/5
+  single_norecord:single   mediator     events 2-6 [+1.88, -4.00, -1.30, +0.78, -1.25]  mean -0.78  sd 2.26  se 1.01  >0: 2/5
+  single_norecord:single   mediator     events 1-6 [+1.48, -2.79, -0.79, +2.42, -1.88]  mean -0.31  sd 2.21  se 0.99  >0: 2/5
+  single_norecord:single   mediator     event 1    [-0.50, +3.25, +1.75, +10.60, -5.00]  mean +2.02  sd 5.72  se 2.56  >0: 3/5
+  single_norecord:single   buyer_agent  events 2-6 [-0.98, +0.29, -1.95, +0.92, +0.33]  mean -0.28  sd 1.17  se 0.52  >0: 3/5
+  single_norecord:single   buyer_agent  events 1-6 [-1.35, +0.33, -1.63, +1.10, +0.23]  mean -0.27  sd 1.17  se 0.52  >0: 3/5
+  single_norecord:single   buyer_agent  event 1    [-3.20, +0.50, +0.00, +2.00, -0.30]  mean -0.20  sd 1.90  se 0.85  >0: 2/5
+
+C0. Placebo for C: the same gap between two identical single firms. Per seed, the mean over events of [(A - B) in the U run + (B - A) in the U' run] / 2, firm profits as in C. A in the U run and B in the U' run play the part of X in positions xa and xb, with the same plan, so this is the gap C would show if X were a single firm.
+  single:single (placebo)  mediator     events 2-6 [-1.37, +1.70, -0.60, +0.68, -4.20]  mean -0.76  sd 2.26  se 1.01  >0: 2/5
+  single:single (placebo)  mediator     events 1-6 [-0.96, +2.29, -1.04, +1.87, -4.33]  mean -0.44  sd 2.67  se 1.20  >0: 2/5
+  single:single (placebo)  mediator     event 1    [+1.10, +5.25, -3.25, +7.80, -5.00]  mean +1.18  sd 5.44  se 2.43  >0: 3/5
+  single:single (placebo)  buyer_agent  events 2-6 [+0.27, +2.22, +2.30, +0.58, -2.05]  mean +0.66  sd 1.78  se 0.79  >0: 4/5
+  single:single (placebo)  buyer_agent  events 1-6 [+0.33, +2.61, +2.38, +0.81, -2.77]  mean +0.67  sd 2.16  se 0.96  >0: 4/5
+  single:single (placebo)  buyer_agent  event 1    [+0.62, +4.55, +2.75, +1.95, -6.35]  mean +0.70  sd 4.19  se 1.87  >0: 4/5
+
+D. Incentive arm (persistent, buyer agent): per-seed market supplier profit per event, and the DiD (O_i - O) - (U_i - U). The analyst can act from event 2; at event 1 the arms differ in wording only.
+  events 1-6:
+    seed 3: profit O_i 1.91  O 9.55  U_i 0.05  U 1.88  DiD -5.81   |  price paid O_i 132.50  O 131.33  U_i 130.50  U 114.75
+    seed 7: profit O_i 1.47  O 3.88  U_i 3.05  U 2.97  DiD -2.50   |  price paid O_i 118.83  O 116.42  U_i 121.00  U 119.42
+    seed 9: profit O_i 0.70  O 5.30  U_i 4.13  U 6.55  DiD -2.18   |  price paid O_i 107.83  O 124.50  U_i 113.33  U 120.25
+    seed 12: profit O_i 6.63  O 6.03  U_i 2.40  U 2.95  DiD +1.15   |  price paid O_i 111.83  O 129.83  U_i 124.67  U 126.50
+    seed 19: profit O_i -1.82  O 1.65  U_i 0.20  U 6.30  DiD +2.63   |  price paid O_i 112.75  O 122.42  U_i 132.00  U 120.00
+    DiD mean -1.34  >0: 2/5
+  events 2-6:
+    seed 3: profit O_i 1.78  O 9.30  U_i -0.08  U 1.69  DiD -5.75   |  price paid O_i 132.20  O 132.70  U_i 131.20  U 114.90
+    seed 7: profit O_i 1.50  O 3.20  U_i 3.10  U 2.70  DiD -2.10   |  price paid O_i 119.60  O 115.50  U_i 120.80  U 119.70
+    seed 9: profit O_i 1.80  O 5.30  U_i 4.20  U 6.40  DiD -1.30   |  price paid O_i 104.00  O 124.50  U_i 113.40  U 120.10
+    seed 12: profit O_i 8.20  O 6.00  U_i 2.72  U 3.40  DiD +2.88   |  price paid O_i 110.40  O 129.80  U_i 125.60  U 126.40
+    seed 19: profit O_i 2.70  O 1.02  U_i 0.20  U 6.30  DiD +7.78   |  price paid O_i 112.90  O 122.10  U_i 132.00  U 120.00
+    DiD mean +0.30  >0: 2/5
+  event 1:
+    seed 3: profit O_i 2.55  O 10.80  U_i 0.70  U 2.80  DiD -6.15   |  price paid O_i 134.00  O 124.50  U_i 127.00  U 114.00
+    seed 7: profit O_i 1.30  O 7.30  U_i 2.80  U 4.30  DiD -4.50   |  price paid O_i 115.00  O 121.00  U_i 122.00  U 118.00
+    seed 9: profit O_i -4.80  O 5.30  U_i 3.80  U 7.30  DiD -6.60   |  price paid O_i 127.00  O 124.50  U_i 113.00  U 121.00
+    seed 12: profit O_i -1.20  O 6.20  U_i 0.80  U 0.70  DiD -7.50   |  price paid O_i 119.00  O 130.00  U_i 120.00  U 127.00
+    seed 19: profit O_i -24.40  O 4.80  U_i 0.20  U 6.30  DiD -23.10   |  price paid O_i 112.00  O 124.00  U_i 132.00  U 120.00
+    DiD mean -9.57  >0: 0/5
+
+E. Round-1 markups tracking past same-type markups (pass-through slope; validation: ~0 in U0). Pooled OLS slope over both institutions; the same by institution; and the within slope, which removes each run x supplier's own means (a fixed-effects slope: event-to-event tracking within a sequence).
+  persistent  single_a         n=100 slope=+0.789  mediator +0.837  buyer_agent +0.679  within +0.484
+  persistent  single_b         n=100 slope=+0.798  mediator +0.806  buyer_agent +0.435  within +0.553
+  persistent  single_norecord  n=100 slope=+0.022  mediator +0.012  buyer_agent -0.199  within +0.035
+  persistent  organized        n=100 slope=+0.743  mediator +0.869  buyer_agent +0.385  within +0.112
+  persistent  organized_pass   n=100 slope=+0.893  mediator +0.931  buyer_agent +0.555  within +0.826
+  random      single_a         n= 80 slope=+0.589  mediator +0.676  buyer_agent +0.288  within +0.490
+  random      single_norecord  n= 80 slope=-0.133  mediator -0.098  buyer_agent -0.391  within -0.261
+  random      organized        n= 80 slope=+0.074  mediator +0.110  buyer_agent +0.007  within -0.038
+  random      organized_pass   n= 80 slope=+0.301  mediator +0.306  buyer_agent +0.477  within +0.236
+
+F. Briefings (organized arms): length and content.
+  persistent  organized          briefings 100  words median 568 (min 375, max 821)  name the contract 98  quote a $ figure 98
+  persistent  organized_revenue  briefings  50  words median 528 (min 340, max 718)  name the contract 48  quote a $ figure 50
+  random      organized          briefings 100  words median 692.5 (min 486, max 1002)  name the contract 80  quote a $ figure 93
+
+G. Event 1, where every arm has the same information (wording check): market supplier profit at event 1 and the mean round-1 markup (percent, both suppliers), means over seeds. Event 1 has the same draws in both environments.
+  persistent  mediator     single_a           n=5  profit at event 1  10.92  round-1 markup at event 1  14.39%
+  persistent  mediator     single_b           n=5  profit at event 1  10.80  round-1 markup at event 1  13.72%
+  persistent  mediator     single_norecord    n=5  profit at event 1  12.50  round-1 markup at event 1  13.27%
+  persistent  mediator     organized          n=5  profit at event 1  10.72  round-1 markup at event 1  13.27%
+  persistent  mediator     organized_pass     n=5  profit at event 1   9.28  round-1 markup at event 1  14.72%
+  persistent  buyer_agent  single_a           n=5  profit at event 1   4.28  round-1 markup at event 1  14.39%
+  persistent  buyer_agent  single_b           n=5  profit at event 1   3.55  round-1 markup at event 1  17.16%
+  persistent  buyer_agent  single_norecord    n=5  profit at event 1   3.71  round-1 markup at event 1  12.89%
+  persistent  buyer_agent  organized          n=5  profit at event 1   6.88  round-1 markup at event 1  15.78%
+  persistent  buyer_agent  organized_pass     n=5  profit at event 1   4.16  round-1 markup at event 1  15.48%
+  persistent  buyer_agent  single_revenue     n=5  profit at event 1   1.66  round-1 markup at event 1  19.76%
+  persistent  buyer_agent  organized_revenue  n=5  profit at event 1  -5.31  round-1 markup at event 1  15.74%
+  random      mediator     single_a           n=5  profit at event 1  11.70  round-1 markup at event 1  14.37%
+  random      mediator     single_norecord    n=5  profit at event 1   8.28  round-1 markup at event 1  11.85%
+  random      mediator     organized          n=5  profit at event 1  13.04  round-1 markup at event 1  13.65%
+  random      mediator     organized_pass     n=5  profit at event 1  10.60  round-1 markup at event 1  13.00%
+  random      buyer_agent  single_a           n=5  profit at event 1   4.24  round-1 markup at event 1  14.66%
+  random      buyer_agent  single_norecord    n=5  profit at event 1   4.98  round-1 markup at event 1  14.72%
+  random      buyer_agent  organized          n=5  profit at event 1   1.82  round-1 markup at event 1  15.19%
+  random      buyer_agent  organized_pass     n=5  profit at event 1   4.18  round-1 markup at event 1  13.16%
+
+H. Tokens and spend by arm (per sequence, means over seeds; spend at $0.10 / $0.50 per million prompt / completion tokens).
+  persistent  buyer_agent  organized                          requests  70.0  prompt   146471  completion   73326  spend $0.0513  (completion by agent: analyst 29389, bidder_organized 28738, buyer_agent 15199)
+  persistent  buyer_agent  organized_pass                     requests  60.0  prompt   125523  completion   48228  spend $0.0367  (completion by agent: bidder_organized_pass 33418, buyer_agent 14811)
+  persistent  buyer_agent  organized_revenue                  requests  70.0  prompt   147481  completion   70974  spend $0.0502  (completion by agent: analyst_revenue 29929, bidder_organized_revenue 26057, buyer_agent 14988)
+  persistent  buyer_agent  organized_vs_single_xa             requests  65.0  prompt   134521  completion   60518  spend $0.0437  (completion by agent: analyst 15823, bidder_organized 13372, bidder_single 16587, buyer_agent 14736)
+  persistent  buyer_agent  organized_vs_single_xb             requests  65.0  prompt   134474  completion   57874  spend $0.0424  (completion by agent: analyst 14651, bidder_organized 12699, bidder_single 15831, buyer_agent 14693)
+  persistent  buyer_agent  single_a                           requests  60.0  prompt   121284  completion   49158  spend $0.0367  (completion by agent: bidder_single 34672, buyer_agent 14485)
+  persistent  buyer_agent  single_b                           requests  60.0  prompt   121715  completion   48522  spend $0.0364  (completion by agent: bidder_single 34269, buyer_agent 14253)
+  persistent  buyer_agent  single_norecord                    requests  60.0  prompt    86536  completion   41037  spend $0.0292  (completion by agent: bidder_single_norecord 26436, buyer_agent 14601)
+  persistent  buyer_agent  single_norecord_vs_single_xa       requests  60.0  prompt   104565  completion   45386  spend $0.0331  (completion by agent: bidder_single 16655, bidder_single_norecord 14045, buyer_agent 14686)
+  persistent  buyer_agent  single_norecord_vs_single_xb       requests  60.0  prompt   104018  completion   45608  spend $0.0332  (completion by agent: bidder_single 16496, bidder_single_norecord 14431, buyer_agent 14682)
+  persistent  buyer_agent  single_revenue                     requests  60.0  prompt   122906  completion   46807  spend $0.0357  (completion by agent: bidder_single_revenue 32057, buyer_agent 14751)
+  persistent  mediator     organized                          requests  70.0  prompt   268644  completion   77979  spend $0.0659  (completion by agent: analyst 31197, bidder_organized 23877, mediator 22905)
+  persistent  mediator     organized_pass                     requests  60.0  prompt   246488  completion   53916  spend $0.0516  (completion by agent: bidder_organized_pass 31956, mediator 21960)
+  persistent  mediator     organized_vs_single_xa             requests  65.0  prompt   258015  completion   67160  spend $0.0594  (completion by agent: analyst 15682, bidder_organized 13013, bidder_single 16273, mediator 22192)
+  persistent  mediator     organized_vs_single_xb             requests  65.0  prompt   258880  completion   66239  spend $0.0590  (completion by agent: analyst 15909, bidder_organized 12440, bidder_single 15268, mediator 22622)
+  persistent  mediator     single_a                           requests  60.0  prompt   243970  completion   52259  spend $0.0505  (completion by agent: bidder_single 30452, mediator 21807)
+  persistent  mediator     single_b                           requests  60.0  prompt   244632  completion   54655  spend $0.0518  (completion by agent: bidder_single 32663, mediator 21992)
+  persistent  mediator     single_norecord                    requests  60.0  prompt   208932  completion   45185  spend $0.0435  (completion by agent: bidder_single_norecord 22033, mediator 23153)
+  persistent  mediator     single_norecord_vs_single_xa       requests  60.0  prompt   228300  completion   48879  spend $0.0473  (completion by agent: bidder_single 15691, bidder_single_norecord 9984, mediator 23204)
+  persistent  mediator     single_norecord_vs_single_xb       requests  60.0  prompt   227302  completion   47581  spend $0.0465  (completion by agent: bidder_single 14725, bidder_single_norecord 10247, mediator 22609)
+  random      buyer_agent  organized                          requests  70.0  prompt   149501  completion   70879  spend $0.0504  (completion by agent: analyst 27923, bidder_organized 28211, buyer_agent 14745)
+  random      buyer_agent  organized_pass                     requests  60.0  prompt   124255  completion   46083  spend $0.0355  (completion by agent: bidder_organized_pass 31827, buyer_agent 14256)
+  random      buyer_agent  single_a                           requests  60.0  prompt   120607  completion   44419  spend $0.0343  (completion by agent: bidder_single 30211, buyer_agent 14208)
+  random      buyer_agent  single_norecord                    requests  60.0  prompt    86215  completion   42254  spend $0.0297  (completion by agent: bidder_single_norecord 27434, buyer_agent 14820)
+  random      mediator     organized                          requests  70.0  prompt   276427  completion   80183  spend $0.0677  (completion by agent: analyst 30566, bidder_organized 24718, mediator 24898)
+  random      mediator     organized_pass                     requests  60.0  prompt   247937  completion   51859  spend $0.0507  (completion by agent: bidder_organized_pass 26947, mediator 24912)
+  random      mediator     single_a                           requests  60.0  prompt   249423  completion   52268  spend $0.0511  (completion by agent: bidder_single 27063, mediator 25204)
+  random      mediator     single_norecord                    requests  60.0  prompt   208304  completion   47411  spend $0.0445  (completion by agent: bidder_single_norecord 21101, mediator 26310)
+  TOTAL over 140 runs: prompt tokens 24986623, completion tokens 7683252, spend $6.34
+
+I. Platform replies that contain a price the rival had bid by then (rounds 1 to r for a round-r reply; within a round both suppliers bid before the mediator replies), excluding a price the addressee itself bid in rounds 1 to r. Under the mediator a match is a possible leak; the buyer's agent never sees the rival's bids, so its matches are coincidences and serve as a rough baseline. Price forms as in run_demo's _price_patterns.
+  persistent  mediator     replies  1080  with a rival price    0
+  persistent  buyer_agent  replies  1320  with a rival price    1
+  random      mediator     replies   480  with a rival price    0
+  random      buyer_agent  replies   480  with a rival price    0
+  No mediator reply has a match.
+
+K. Mixed markets (persistent), events 2-6 and event 1, both positions pooled: how each firm bids. Per seed, wins of X and of the single firm U (out of 10 events for events 2-6 and 2 for event 1: the events x 2 positions); then pooled means over seeds, positions and events: round-1 markup and final markup (percent of the firm's own cost at the bid's terms), price cut (round-1 price minus final price), final delivery weeks and tier, and profit per event.
+  organized:single         mediator     events 2-6 wins X-U per seed [5-5, 3-7, 3-7, 5-5, 3-7]; final markup X - U per seed [-2.50, -1.55, +1.18, +3.31, +3.78]
+    X: win share 0.38  round-1 markup   7.94%  final markup   5.49%  price cut  1.22  final weeks 4.02  final tier 3.62  profit/event  3.53  profit per win  9.29
+    U: win share 0.62  round-1 markup   6.87%  final markup   4.65%  price cut  3.76  final weeks 4.56  final tier 3.06  profit/event  3.79  profit per win  6.11
+  organized:single         mediator     event 1    wins X-U per seed [2-0, 2-0, 1-1, 1-1, 1-1]; final markup X - U per seed [-4.88, +2.02, +2.52, -0.85, +0.19]
+    X: win share 0.70  round-1 markup  14.46%  final markup   6.60%  price cut  2.20  final weeks 3.80  final tier 3.70  profit/event  5.64  profit per win  8.06
+    U: win share 0.30  round-1 markup  10.80%  final markup   6.81%  price cut  3.65  final weeks 4.70  final tier 3.50  profit/event  2.63  profit per win  8.77
+  organized:single         buyer_agent  events 2-6 wins X-U per seed [5-5, 5-5, 8-2, 5-5, 5-5]; final markup X - U per seed [+4.71, +0.04, +0.85, +1.33, +0.48]
+    X: win share 0.56  round-1 markup   7.30%  final markup   3.73%  price cut  0.81  final weeks 3.46  final tier 3.92  profit/event  2.67  profit per win  4.76
+    U: win share 0.44  round-1 markup   5.93%  final markup   2.25%  price cut  0.80  final weeks 3.18  final tier 3.80  profit/event  0.99  profit per win  2.25
+  organized:single         buyer_agent  event 1    wins X-U per seed [1-1, 1-1, 1-1, 1-1, 1-1]; final markup X - U per seed [-3.86, -1.83, +1.45, +2.58, -0.18]
+    X: win share 0.50  round-1 markup  16.14%  final markup   3.63%  price cut  3.00  final weeks 3.80  final tier 3.80  profit/event  2.59  profit per win  5.18
+    U: win share 0.50  round-1 markup  15.46%  final markup   4.00%  price cut  3.20  final weeks 3.40  final tier 3.70  profit/event  1.92  profit per win  3.84
+  single_norecord:single   mediator     events 2-6 wins X-U per seed [5-5, 0-10, 5-5, 5-5, 4-6]; final markup X - U per seed [+2.69, +1.41, -0.53, +0.95, -0.48]
+    X: win share 0.38  round-1 markup  14.28%  final markup   8.30%  price cut  4.59  final weeks 4.16  final tier 3.48  profit/event  5.61  profit per win 14.75
+    U: win share 0.62  round-1 markup   9.49%  final markup   7.49%  price cut  2.21  final weeks 5.31  final tier 3.34  profit/event  6.38  profit per win 10.30
+  single_norecord:single   mediator     event 1    wins X-U per seed [1-1, 1-1, 1-1, 1-1, 0-2]; final markup X - U per seed [-2.17, +1.19, -0.20, +10.31, +3.25]
+    X: win share 0.40  round-1 markup  14.93%  final markup  10.21%  price cut  2.30  final weeks 4.20  final tier 3.30  profit/event  7.49  profit per win 18.72
+    U: win share 0.60  round-1 markup  11.74%  final markup   7.73%  price cut  1.45  final weeks 4.60  final tier 3.40  profit/event  5.47  profit per win  9.12
+  single_norecord:single   buyer_agent  events 2-6 wins X-U per seed [3-7, 4-6, 3-7, 5-5, 5-5]; final markup X - U per seed [+0.67, +0.86, -1.32, +1.86, -1.49]
+    X: win share 0.40  round-1 markup  14.63%  final markup   2.66%  price cut -0.39  final weeks 3.09  final tier 3.94  profit/event  1.42  profit per win  3.56
+    U: win share 0.60  round-1 markup   5.40%  final markup   2.55%  price cut  1.31  final weeks 3.21  final tier 3.84  profit/event  1.70  profit per win  2.84
+  single_norecord:single   buyer_agent  event 1    wins X-U per seed [0-2, 1-1, 1-1, 2-0, 1-1]; final markup X - U per seed [+0.06, +1.18, +0.11, -1.83, +0.01]
+    X: win share 0.50  round-1 markup  15.74%  final markup   2.78%  price cut  1.05  final weeks 3.25  final tier 3.80  profit/event  1.18  profit per win  2.36
+    U: win share 0.50  round-1 markup  16.48%  final markup   2.88%  price cut  2.75  final weeks 3.15  final tier 3.80  profit/event  1.38  profit per win  2.76
+  single:single (placebo)  mediator     events 2-6 wins X-U per seed [5-5, 5-5, 5-5, 5-5, 5-5]; final markup X - U per seed [-0.50, +0.69, +0.15, -0.16, -3.82]
+    X: win share 0.50  round-1 markup   8.95%  final markup   5.81%  price cut  2.21  final weeks 4.90  final tier 3.22  profit/event  4.72  profit per win  9.44
+    U: win share 0.50  round-1 markup   8.98%  final markup   6.54%  price cut  3.15  final weeks 4.81  final tier 3.18  profit/event  5.48  profit per win 10.96
+  single:single (placebo)  mediator     event 1    wins X-U per seed [1-1, 1-1, 1-1, 1-1, 1-1]; final markup X - U per seed [+2.36, +8.21, -4.28, +7.69, -3.74]
+    X: win share 0.50  round-1 markup  13.68%  final markup   9.20%  price cut  3.20  final weeks 5.20  final tier 3.40  profit/event  6.02  profit per win 12.04
+    U: win share 0.50  round-1 markup  14.43%  final markup   7.15%  price cut  4.70  final weeks 4.30  final tier 3.50  profit/event  4.84  profit per win  9.68
+  single:single (placebo)  buyer_agent  events 2-6 wins X-U per seed [5-5, 7-3, 5-5, 7-3, 5-5]; final markup X - U per seed [+0.99, +1.32, +1.65, -0.64, -2.81]
+    X: win share 0.58  round-1 markup   5.38%  final markup   2.63%  price cut  1.77  final weeks 3.24  final tier 3.62  profit/event  1.94  profit per win  3.34
+    U: win share 0.42  round-1 markup   6.70%  final markup   2.53%  price cut  4.64  final weeks 3.29  final tier 3.74  profit/event  1.28  profit per win  3.04
+  single:single (placebo)  buyer_agent  event 1    wins X-U per seed [1-1, 2-0, 1-1, 2-0, 0-2]; final markup X - U per seed [+0.44, +0.51, +3.55, -0.72, -2.50]
+    X: win share 0.60  round-1 markup  16.52%  final markup   3.15%  price cut  1.90  final weeks 3.10  final tier 3.70  profit/event  2.31  profit per win  3.85
+    U: win share 0.40  round-1 markup  15.03%  final markup   2.90%  price cut  2.85  final weeks 3.15  final tier 4.00  profit/event  1.60  profit per win  4.01
+
+J. Briefings chosen by a fixed rule (the first pilot seed, supplier A, events 2 and 6), verbatim.
+
+  [persistent organized mediator seed 3 event 2; contract Quality Priority, A's type quality]
+    BRIEFING: EVENT 2 OF 6
+    
+    Bidder: please read the platform rules you have been given, then this briefing. Your final bid is your round 3 bid. Rounds 1 and 2 are for testing the market and reading the platform's replies.
+    
+    WHAT WE KNOW
+    
+    1. Contract. Event 1 was run under the Quality Priority contract. The contract does not change across the six events, so assume the buyer's priority is quality. Quality is the buyer's main concern, and delivery speed matters much less to it.
+    
+    2. Our cost type. Our record shows we are a quality specialist. For a quality specialist, higher quality tiers cost relatively less and faster delivery costs relatively more. So tier 5 is cheap for us, and holding a slower delivery is cheap too.
+    
+    3. Our last result. In Event 1 we won with $128.00, 5.0 weeks, tier 5, and made $16.80 profit. That implies our cost for 5.0 weeks at tier 5 was about $111.20. Use this as a reference only. Your cost figures for this event are authoritative. If they differ from $111.20 for the same terms, trust your figures and tell us.
+    
+    4. The other supplier. Most likely (about 3 in 4) they are a speed specialist. Speed specialists tend to win on fast delivery and pay more for top quality, so they may bid faster and cheaper than us, but at lower quality. We do not know their bids. Treat this as a hypothesis.
+    
+    5. The buyer's outside option. If both final bids are priced above the buyer's value for their terms, no contract is awarded. Keep your price below what the buyer would value for your terms, or you may get nothing.
+    
+    6. Platform replies. The platform is told to serve both the buyer and the suppliers. Its guidance has been useful in direction (move to top quality, lower price), but its comments are not reliable to the cent. Check any suggestion against your own cost and profit before adopting it.
+    
+    RECOMMENDED APPROACH
+    
+    - Quality: tier 5. This is the buyer's priority and cheap for us. Do not drop below tier 5 unless your cost figures show a clear reason.
+    - Delivery: 5.0 weeks as the default. This is the terms we won on last time and is cheaper for a quality specialist than 4 weeks. Move to 4 weeks only if your cost figures show the margin still works and the platform's replies suggest it would make a real difference to the score. Do not go faster than 4 weeks unless your figures clearly support it.
+    - Price: start around $130 to $136 in round 1 to see the platform's reply. Use round 2 to adjust toward the score the platform indicates. Aim for a round 3 price that is at or just under the level that wins, based on the replies, and that leaves a positive profit of at least roughly $15.
+    - Floor: never bid a price at or below your cost for the terms you bid. Check price minus cost before each bid. A win at zero or negative profit is a loss.
+    - Ceiling: keep the price below the buyer's value for your terms. If the platform signals that both bids are above the buyer's value, lower the price.
+    
+    PROCEDURE
+    
+    - Round 1: tier 5, 5.0 weeks, price about $133. Note the platform's reply.
+    - Round 2: adjust price (and delivery only if justified). Use the reply to judge whether you are behind or ahead on the buyer's combined view.
+    - Round 3: submit the final bid. Confirm it is above your cost, below the buyer's value, and priced to win with the profit you want.
+    
+    Report back after the event: the final bid, whether you won, the platform's replies, and any cost figures that differ from the reference above.
+
+  [persistent organized mediator seed 3 event 6; contract Quality Priority, A's type quality]
+    **BRIEFING: EVENT 6 of 6 (final event)**
+    
+    **1. Contract and your company's position**
+    
+    - This is the Quality Priority contract. The contract does not change across events, so the buyer's dominant priority is quality.
+    - Your company is a quality specialist. Your costs are the same type in every event.
+    - The other supplier is most likely a speed specialist, though this is not certain.
+    
+    **2. What the record shows**
+    
+    - Your cost at 5-week delivery and tier 5 has been $111.20 in every event where it is recoverable. Events 3, 4 and 5 show this directly: a $123 win paid $11.80 profit, and a $124 win paid $12.80. Event 1 agrees: a $128 win paid $16.80.
+    - Your 5-week, tier 5 bids have won at $123, $124, $124 and $128. The one loss at this specification was at $129 (Event 2).
+    - The competitor's effective threshold therefore appears to sit somewhere between $124 and $129. Its exact position is unknown and may vary by event.
+    - Profit per win is price minus $111.20. Each $1 above $111.20 adds $1 of profit only if you still win.
+    
+    **3. Platform replies: treat with caution**
+    
+    - The platform's replies have repeated one template across all events. They tell you to ease delivery and to cut price further. Their comparisons ("ahead," "behind," "narrowly ahead") have not been consistent with your results.
+    - Do not treat them as evidence of cost savings. You have no record of your cost at any delivery time other than 5 weeks, so there is no evidence that easing delivery lowers your cost.
+    - Changing delivery changes the buyer's score in a way you cannot measure from this record. Do not change delivery or tier without a clear reason in your own cost figures.
+    
+    **4. Recommended final bid**
+    
+    - Price: $125.00
+    - Delivery: 5.0 weeks
+    - Quality tier: 5
+    
+    Reasons:
+    - Specification 5 weeks / tier 5 has the strongest record for you (four wins out of five at this specification, the one loss at $129).
+    - $125 sits between the proven winning prices ($123–$128) and gives about $13.80 profit if you win. It avoids dropping to $123–$124, which gave the same wins at lower margin.
+    - $129 or higher has produced a loss, so stay below it.
+    - Do not go below $123 without a new reason. It adds no information and only reduces profit.
+    
+    **5. How to use the rounds**
+    
+    - This is the last event, so there is no later reputation to protect. Optimise this event's expected profit only.
+    - Round 1 and Round 2 are not decisive. You may submit $125 / 5.0wk / tier 5 in Round 1, and keep the same terms unless the platform's reply signals a clear change in the competition.
+    - Round 3 is your final bid. Use the same terms ($125 / 5.0wk / tier 5) unless your own displayed cost figures differ from $111.20 at this specification. If they differ, keep your margin at about $13–14 above your shown cost at 5 weeks and tier 5, and stay within the $123–$128 range.
+    - Do not bid above your shown cost plus a margin you cannot justify. The buyer may award nothing if both final bids exceed its value, and you gain nothing from that.
+    
+    **6. Summary**
+    
+    Final bid: $125.00, 5.0 weeks, tier 5. Keep delivery and tier unchanged, ignore the template advice to ease delivery or cut price further, and confirm against your own displayed costs before submitting.
+
+  [persistent organized buyer_agent seed 3 event 2; contract Quality Priority, A's type quality]
+    BRIEFING FOR EVENT 2 OF 6
+    
+    Your company is a quality specialist. From your costs, faster delivery is expensive for us and higher quality tiers are comparatively cheap. Use the costs you are shown for this event. Do not bid below your cost at the delivery and tier you choose.
+    
+    What we know about this contract: Event 1 was labelled "Quality Priority," and the contract is the same in every event. The buyer therefore places a high value on quality. Tier 5 should carry real weight in the buyer's score. Since quality is comparatively cheap for us, we have an advantage in exactly the dimension this buyer cares about.
+    
+    What happened in Event 1: We bid $140/4 weeks/tier 4, then $139/3 weeks/tier 5, then $138/3 weeks/tier 4, and lost to another supplier. We do not know that supplier's bids. The other supplier is most likely a speed specialist (about 3 in 4 chance, since their type is opposite ours), so they probably compete on delivery. Do not try to match their fastest delivery. Our cost structure makes speed expensive for us, and chasing it would erode our margin.
+    
+    The platform's replies: In Event 1 the platform pushed us on all three terms every round, asking for lower price, faster delivery and higher quality together. It is the buyer's agent and is instructed to get the buyer the best deal. Its replies say nothing about where the winning score sits, so do not treat its demands as a signal of the required terms. Do not give up margin in every dimension just because it asks.
+    
+    How to decide the bids:
+    - Your profit on a bid is (price minus your cost at that delivery and tier), and it counts only if you win. Winning is worth nothing unless the price is above your cost.
+    - A final bid wins only if its score (buyer's value for delivery and quality, minus price) beats the other supplier's. The winner is paid its own price, so do not bid at the buyer's value. Leave margin for yourself.
+    - The buyer can award nothing if both prices are above its value for their terms. Do not price so high that you fall outside that value.
+    - Our Event 1 losses came from price-led concessions that still did not win. Round 3 should therefore not simply repeat the round 2 pattern with a small price cut. Make it a deliberate choice: a higher quality tier at a price that keeps your margin positive, with delivery set at a level your cost supports and that does not invite an expensive speed race.
+    
+    Plan:
+    - Round 1: Bid a tier 5 offer at a moderate delivery time and a price that keeps a clear positive margin over your cost. This tests whether quality carries enough weight to win.
+    - Round 2: Use the reply to adjust. If the platform signals that price or delivery is the sticking point, move on the dimension that costs you least, and do not give up quality, since it is your advantage.
+    - Round 3: Submit the final bid that maximises your expected profit, meaning positive margin times a reasonable chance of winning. Do not drop below your cost.
+    
+    Report the three bids and your reasoning for each.
+
+  [persistent organized buyer_agent seed 3 event 6; contract Quality Priority, A's type quality]
+    **BRIEFING: EVENT 6 OF 6 (FINAL EVENT)**
+    
+    **1. What we know about this buyer**
+    - This is a Quality Priority contract. It was the same contract in all five earlier events, and the contract does not change in this event.
+    - We are a quality specialist, as in all earlier events. A quality specialist's cost rises more with faster delivery and less with a higher quality tier than a speed specialist's cost does. Tier 5 is relatively cheap for us. Delivery faster than 4 weeks is relatively expensive.
+    - Our record implies a cost of $123.80 for 4.0 weeks at tier 5. Event 2 paid $136.00 for a profit of $12.20, and Events 3 to 5 paid $134.00 for a profit of $10.20 each. If the cost figures shown to the bidder differ from this, use the figures shown to you.
+    
+    **2. What has won**
+    - Event 1: we lost at $138.00, 3.0 weeks, tier 4.
+    - Events 2 to 5: we won with 4.0 weeks, tier 5 at $136.00, $134.00, $134.00 and $134.00. The $134.00 bid won three times in a row.
+    - The platform's replies in every event asked for lower price, faster delivery and higher tier. These replies were the same pressure in each event and did not reflect any change in what won. Do not treat them as a signal to cut price or speed up delivery.
+    
+    **3. Recommended bid**
+    - Final bid (Round 3): **$134.00, 4.0 weeks, quality tier 5.**
+    - This is the configuration that has won in the most recent events. It keeps profit at about $10.20 per win, with a margin above our cost of $123.80.
+    - Do not go below $123.80 at any point. Do not offer faster delivery or a different tier. Faster delivery would raise our cost, and no tier change is needed to win.
+    - Raising to $135.00 or $136.00 would add $1.00 to $2.00 of profit per win, but $136.00 lost in Event 1 and has won only once, so the chance of losing rises. Keep to $134.00 unless you have reason to think the competitor has weakened.
+    
+    **4. Round-by-round plan**
+    - Round 1: Submit $134.00, 4.0 weeks, tier 5. Our record shows this configuration wins under similar conditions.
+    - Round 2: Keep $134.00, 4.0 weeks, tier 5 unless the platform's reply gives a concrete new term. Do not respond to general requests to "improve on all three dimensions" by changing delivery or tier.
+    - Round 3 (final): Submit $134.00, 4.0 weeks, tier 5 again, unless the platform's reply states an explicit price the buyer will accept. In that case, do not go below $134.00 without a clear reason. Never bid below $123.80.
+    
+    **5. Outside option**
+    - The buyer may award nothing if both final bids are priced above its value for the terms. A $134.00 bid at 4.0 weeks, tier 5 has been accepted in our recent events, so it is within the range where the buyer will award.
+    
+    **6. Objective**
+    - This is the last event, so there are no later events to protect. Maximise expected profit in this event alone: a win at a price slightly above $134.00 is worth more, but the risk of losing is what matters. Stay at $134.00.
+
+  [persistent organized_revenue buyer_agent seed 3 event 2; contract Quality Priority, A's type quality]
+    **BRIEFING: EVENT 2 of 6**
+    
+    **Context**
+    - Event 1 was for the Quality Priority contract. The contract stays the same in all six events, so Event 2 is also for Quality Priority. Buyer weights from Event 1 should carry over.
+    - Our company is a quality specialist. Faster delivery costs us considerably more. A higher quality tier costs us relatively little.
+    - The other supplier is probably a speed specialist, so it will likely offer faster delivery at a lower quality tier. It is the same supplier as in Event 1.
+    - In Event 1, we won in round 3 with $134.00, 3.5 weeks, tier 5. Our profit was $2.55, which implies our cost at 3.5 weeks and tier 5 is about $131.45. Treat that as our working cost for these terms. Check it against your own cost figures for this event. If your figures differ, use yours and tell me.
+    
+    **Objective**
+    Maximise our total profit across the six events. Profit is only earned if we win, and only the final round-3 bid counts. Winning at a price below our cost loses money, so never bid below cost for the terms you submit.
+    
+    **Recommended final bid (round 3): $134.00, 3.5 weeks, tier 5**
+    - This is the bid that won in Event 1 against the same competitor under the same contract. It is our best evidence of a winning score.
+    - Do not cut the price. Lowering it reduces profit on every win and does not improve the chance of winning if this bid already beats the competitor.
+    - Do not raise the price without a reason. Each extra dollar lowers our score by a dollar, so a higher price is only safe if the competitor is weaker this time, and we have no evidence of that.
+    - Do not shorten the delivery time below 3.5 weeks. Faster delivery costs us a lot more, which would cut our margin.
+    - Do not move to tier 5 at a higher price than $134.00, since tier 5 is already the maximum.
+    
+    **Rounds 1 and 2**
+    - Rounds 1 and 2 do not decide the award. Only the round-3 bid counts.
+    - You may open with $134.00, 3.5 weeks, tier 5, or use these rounds to test the platform's response.
+    - The platform will ask for a lower price, faster delivery, and a higher tier. In Event 1 these requests came with no specific weighting. Do not chase them. Each move toward faster delivery raises our cost, and a lower price cuts our margin.
+    - Do not treat the platform's replies as information about the competitor. The platform has not told us the competitor's bids and should not be relied on for them.
+    - If the platform's reply to round 2 is the same as Event 1 (asking for improvement on all three dimensions without saying which matters most), keep the final bid at $134.00, 3.5 weeks, tier 5.
+    
+    **Guardrails**
+    - Never submit a final bid priced below your working cost for the terms submitted.
+    - If both bids are priced above the buyer's value for their terms, no contract is awarded. Our $134.00 bid was accepted in Event 1, so it is probably within the buyer's value, but this is not guaranteed.
+    - Do not invent or assume competitor bids.
+    
+    **Report back after the event**
+    - Whether we won, the final price, delivery and tier, and our profit.
+    - Any change in the platform's replies compared with Event 1.
+    - Any change in your cost figures.
+
+  [persistent organized_revenue buyer_agent seed 3 event 6; contract Quality Priority, A's type quality]
+    **BRIEFING: EVENT 6 OF 6**
+    
+    **Your role:** You are the bidder. You set the price, delivery time and quality tier of each bid. Your bids are used only in round 3 for the award. Use your own cost sheet for this event. The figures below come from the company's record, not from your sheet.
+    
+    **What we know**
+    
+    - **Contract:** The contract is the same in all events. Events 1–5 were all labelled "Quality Priority," so assume the buyer weights quality heavily for this event too.
+    - **Our cost type:** Quality specialist, the same as in all past events. For us, faster delivery is relatively expensive and a higher quality tier is relatively cheap. Quality is our cost advantage.
+    - **Our cost at 3.5 weeks, tier 5:** About $131.45. This is derived from Events 1–4, where we bid $134.00 at 3.5 weeks, tier 5, won, and earned $2.55 profit each time. Check this against your own sheet. If your sheet differs, trust your sheet.
+    - **Record:** We won Events 1–4 at $134.00, 3.5 weeks, tier 5. We lost Event 5 with the same bid. Another supplier beat us on the buyer's score. We do not know whether that supplier was cheaper, faster, or higher on quality.
+    - **The other supplier:** It is most likely a speed specialist (about 3 in 4 chance it is the opposite of us). A speed specialist typically wins on delivery time and lower price, not on quality. Treat this as a probable pattern, not a certainty.
+    - **Platform replies:** They are generic pressure messages aimed at the buyer's interest. They do not reveal which dimension the buyer weights most, and they do not reliably reveal competitor terms. Do not read their wording as a signal about the other supplier's bid. Do not claim to the platform that other bids exist or quote any figures.
+    
+    **What to do**
+    
+    1. **Tier:** Bid tier 5, the highest tier offered. Quality is cheap for us and is likely what the buyer values. Do not drop below tier 5.
+    2. **Delivery:** Stay at 3.5 weeks unless your own cost sheet shows that a faster time (for example 3.0 weeks) costs us little more and you can hold a viable margin. Going faster is the main way to beat a speed specialist, but only do it if the cost is low.
+    3. **Price:** Since we lost Event 5 at $134.00, a modest price reduction is likely needed to win. Aim for a final bid between about $132.00 and $133.50 at 3.5 weeks, tier 5, subject to your own cost sheet.
+    4. **Floor:** Do not bid below your own cost for the terms you offer. At 3.5 weeks, tier 5, the cost is about $131.45, so any price below that loses money.
+    5. **Outside option:** If both final bids are above the buyer's value for their terms, no contract is awarded and we earn nothing. Keeping the price competitive therefore matters.
+    
+    **Round plan**
+    
+    - **Round 1:** Submit about $133.00, 3.5 weeks, tier 5. This tests whether the buyer responds to a modest cut.
+    - **Round 2:** Use the reply only as a weak signal. If the reply again pushes for price and delivery, you may trim the price slightly (no lower than your cost floor) or test 3.0 weeks at tier 5 if your costs allow. Do not raise the price.
+    - **Round 3 (final):** Choose the bid that gives the best expected profit: a price that is likely to win, still above your cost, with tier 5 held. A win at about $133 earns about $1.50 profit. A loss earns nothing. A win at $134 earns $2.55, but Event 5 suggests that price may lose.
+    
+    **Objective note:** The company's objective is total profit across all six events, not total revenue. Do not raise the price just to increase revenue. Choose the final bid that maximises the chance of winning times the profit per win.
+
+  [random organized buyer_agent seed 3 event 2; contract Quality Priority, A's type quality]
+    BRIEFING: EVENT 2 OF 6
+    
+    Your objective is your company's total profit across all six events. Every decision should serve that total. A win that earns nothing is worth nothing, and a loss earns zero, so the aim is a sensible margin on each win, not the lowest price that wins.
+    
+    WHAT WE KNOW FROM EVENT 1
+    - Contract: Quality Priority. Our costs were those of a quality specialist.
+    - We bid $125.00 / 5.0 weeks / tier 3 in round 1, then $124.00 / 4.0 weeks / tier 4 in round 2, then $121.00 / 4.0 weeks / tier 4 in round 3. We won and were paid $121.00. Our profit was $0.80, which implies our cost at 4 weeks and tier 4 was about $120.20 at that time.
+    - The platform pushed on all three terms (price, delivery, quality) in both replies. It did not say which term the buyer values most. Treat its uniform pressure as negotiating style, not as a signal of priorities.
+    - The round 2 reply said "we are still evaluating other options." We cannot verify that. Do not repeat or act on any claim about competing offers, and do not state anything to the platform about other bids that we cannot back up.
+    - Event 1's cost figures are not a guide to Event 2. Our cost type is drawn afresh each event, so you must use the cost figures you are given for this event.
+    
+    WHAT IS NEW IN EVENT 2
+    - The contract is not named. Work out which term the buyer values more from the platform's replies in this event, especially how hard it presses on each term, and whether it names one term as the priority. Adjust your terms accordingly.
+    - Cost types: faster delivery is cheaper for a speed specialist than for a quality specialist, and higher quality is dearer for a speed specialist. In general, a quality specialist is relatively cheaper at higher quality tiers, and a speed specialist at faster delivery. Use your own cost figures to see where you have the advantage. Compete on the term where your costs are lowest relative to what the buyer values.
+    - The other supplier is probably of the opposite cost type to ours (about 3 in 4 chance). If you are a quality specialist, expect the rival to compete more strongly on delivery; if you are a speed specialist, expect it to compete more strongly on quality. Do not assume this with certainty.
+    
+    RULES THAT MATTER
+    - Only the round 3 bid counts. Rounds 1 and 2 are for learning from the platform's replies, so use them to probe what the buyer values, not to make concessions you cannot afford.
+    - The score is the buyer's value for delivery and quality minus price. The highest score wins, and the winner is paid its own price. So you are paid your full bid, which means you should not bid lower than necessary.
+    - If both final prices exceed the buyer's value for their terms, the buyer awards nothing. Keep your price low enough to avoid this, but never below your cost.
+    
+    PRICING GUIDANCE
+    1. Before round 1, compute your cost for each combination of delivery and quality you are considering, using the figures you were given. Never bid a price below your cost for the terms you bid.
+    2. Round 1: make an opening bid that is clearly competitive on the term you think the buyer values most, with a reasonable margin above your cost. Use the reply to judge which term the buyer rewards.
+    3. Round 2: adjust mainly on the term the reply shows is the buyer's priority. Keep a margin over cost. If the platform asks for "a meaningfully sharper number," move only as far as your cost allows.
+    4. Round 3: make your final bid. It should win at a price that leaves a worthwhile profit, not just a win. In Event 1 we won with only $0.80 profit. Do not drop further in price merely to beat a rival you cannot see, unless the gap is small. Keep in mind that a loss earns nothing, so the trade-off is between a small profit with a good chance of winning and a larger profit with a lower chance.
+    
+    WHAT TO RETURN
+    After the event, report the final bid, whether we won, the price paid, our profit, and any replies that indicated which term the buyer prioritises. Do not include any statements about competing offers that you cannot verify.
+
+  [random organized buyer_agent seed 3 event 6; contract Speed Priority, A's type speed]
+    **BRIEFING: EVENT 6 OF 6 (final event)**
+    
+    **Objective:** Maximise total company profit across all 6 events. Profit on a won event is price minus your total cost at that bid's delivery and quality. A lost event earns nothing. Winning at a loss is worse than not winning.
+    
+    **What we know about the contract:** The contract type is not named until the event starts, so plan for either one. The buyer values faster delivery and higher quality in both, but by different amounts. If the event header names the priority, use it. Otherwise, do not assume a priority.
+    
+    **What our record shows:**
+    - Events 1, 2 and 3 were Quality Priority. We won 1 and 2, and lost 3.
+    - Events 4 and 5 were Speed Priority. We lost 4 and won 5.
+    - Winning final bids were $113.50 to $121.00. Losing final bids were $124.50 and $128.50. Price has been the decisive variable, and a large price rise cost us event 3.
+    - Our wins were at margins of $0.80 to $2.30. Keep margins this thin in mind. A bid that is too low wins nothing useful.
+    
+    **How to read the platform's replies:** Every reply asks for improvement on price, delivery and quality together, and most say we are "evaluating alternatives." This is generic pressure from a buyer-side agent. It does not reveal the other supplier's bid, and it does not tell us which term the buyer values most. Do not treat it as evidence that we are behind, and do not chase every demand. Make changes that are cheap for us and that lower price.
+    
+    **Use your own cost structure:**
+    - If you are a speed specialist, faster delivery is your cheaper lever. Offer speed rather than tier.
+    - If you are a quality specialist, a higher tier is your cheaper lever. Offer tier rather than speed.
+    - Choose the term to improve based on which one costs us least. Improve it only where it is cheap.
+    
+    **Bidding rules for this event:**
+    1. Round 1: open at a price that leaves a clear margin over your cost at the chosen delivery and tier. Do not open at the lowest price you can think of.
+    2. Round 2: after the reply, make a modest, cost-effective improvement. Do not give away margin to match every demand.
+    3. Round 3 (final): bid the lowest price that still gives a positive profit, is at or below the buyer's apparent value for those terms, and is likely to beat the other supplier. Recent winning prices were about $113.50 to $121.00. Do not raise price sharply in the final round.
+    4. Never bid below your own total cost at the final delivery and tier. A profitable loss is the same as a loss in total profit, but a loss-making win reduces it.
+    5. Keep the final bid priced so it is not above the buyer's value for its terms. If both final bids exceed that value, no award is made.
+    
+    **Communication:** Make only claims you can support. Do not state that competing offers are better, or that we are ahead, unless it is true. Keep statements accurate about our bids and terms.
+    
+    **Output:** Give one final bid with price, delivery and tier, along with your reasoning in brief.

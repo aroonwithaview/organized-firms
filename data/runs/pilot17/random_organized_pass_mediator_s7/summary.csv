@@ -1,0 +1,7 @@
+institution,organization,organization_a,organization_b,prompt_set,environment,seed,event,contract,type_a,type_b,same_type,winner,awarded,correct_winner,efficient_winner,efficiency,buyer_surplus,supplier_profit,joint_surplus,n_rule_priced_bids,n_tool_fallback_bids,n_rival_price_quotes
+mediator,organized_pass,organized_pass,organized_pass,primitives,random,7,1,Speed Priority,speed,speed,True,A,True,True,A,0.9060150375939849,64.5,7.799999999999997,72.3,0,0,0
+mediator,organized_pass,organized_pass,organized_pass,primitives,random,7,2,Speed Priority,speed,quality,False,A,True,True,A,0.993734335839599,65.5,13.799999999999997,79.3,0,0,0
+mediator,organized_pass,organized_pass,organized_pass,primitives,random,7,3,Speed Priority,speed,quality,False,A,True,True,A,0.993734335839599,66.0,13.299999999999997,79.3,0,0,0
+mediator,organized_pass,organized_pass,organized_pass,primitives,random,7,4,Quality Priority,quality,speed,False,A,True,True,A,0.9947573598601963,77.5,15.0,92.5,0,0,0
+mediator,organized_pass,organized_pass,organized_pass,primitives,random,7,5,Speed Priority,speed,quality,False,A,True,True,A,0.993734335839599,67.5,11.799999999999997,79.3,0,0,0
+mediator,organized_pass,organized_pass,organized_pass,primitives,random,7,6,Speed Priority,speed,speed,True,B,True,False,A,0.993734335839599,70.5,8.799999999999997,79.3,0,0,0

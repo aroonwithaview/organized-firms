@@ -1,0 +1,113 @@
+{
+  "status": "complete",
+  "error": null,
+  "started_at": "2026-10-17T03:20:08+00:00",
+  "finished_at": "2026-10-17T03:25:59+00:00",
+  "usage": {
+    "requests": 60,
+    "failed_requests": 0,
+    "prompt_tokens": 249874,
+    "completion_tokens": 50619,
+    "largest_completion_tokens": 1395,
+    "truncated": 0,
+    "no_usage": 0,
+    "finish_reasons": {
+      "stop": 60
+    },
+    "http_attempts": 99,
+    "http_responses": {
+      "200": 60,
+      "429": 39
+    },
+    "by_agent": {
+      "bidder_organized_pass": {
+        "requests": 36,
+        "failed_requests": 0,
+        "prompt_tokens": 99276,
+        "completion_tokens": 30565,
+        "largest_completion_tokens": 1395,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 36
+        }
+      },
+      "mediator": {
+        "requests": 24,
+        "failed_requests": 0,
+        "prompt_tokens": 150598,
+        "completion_tokens": 20054,
+        "largest_completion_tokens": 1270,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 24
+        }
+      }
+    }
+  },
+  "argv": [
+    "--backend",
+    "openai",
+    "--hosted",
+    "--default-sampling",
+    "--no-tools",
+    "--base-url",
+    "https://api.anthropic.com/v1/",
+    "--model",
+    "claude-haiku-5-5",
+    "--max-tokens",
+    "16000",
+    "--max-retries",
+    "30",
+    "--timeout",
+    "300",
+    "--prompts",
+    "primitives",
+    "--events",
+    "6",
+    "--rounds",
+    "3",
+    "--environment",
+    "persistent",
+    "--institutions",
+    "mediator",
+    "--organizations",
+    "organized_pass",
+    "--seeds",
+    "21",
+    "--out",
+    "outputs/followup17/persistent_organized_pass_mediator_s21"
+  ],
+  "backend": "openai",
+  "model": "claude-haiku-5-5",
+  "base_url": "https://api.anthropic.com/v1/",
+  "hosted": true,
+  "default_sampling": true,
+  "max_tokens": 16000,
+  "max_retries": 30,
+  "timeout": 300,
+  "no_tools": true,
+  "institutions": [
+    "mediator"
+  ],
+  "organizations": [
+    "organized_pass"
+  ],
+  "mixed": null,
+  "prompts": "primitives",
+  "environment": "persistent",
+  "events": 6,
+  "rounds": 3,
+  "max_history_events": 0,
+  "seeds": [
+    21
+  ],
+  "debug_log": null,
+  "git_commit": "9f1cf25aecb0ebb02dcafb7cd46a2d2844208083",
+  "git_dirty": false,
+  "source_sha256": "46258eff7f4a97117cc9b4bfb10693be0c7d45ffab3ebd23aaec8d71c142143a",
+  "python": "3.14.3",
+  "numpy": "2.4.2",
+  "openai": "2.26.0"
+}

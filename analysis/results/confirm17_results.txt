@@ -1,0 +1,55 @@
+Confirmatory tests on the frozen code. Roots: data/runs/confirm17_memory; data/runs/confirm17_concession
+Runs read 120; integrity problems 0
+(commit, dirty, source): [('9f1cf25aecb0ebb02dcafb7cd46a2d2844208083', False, '46258eff7f4a97117cc9b4bfb10693be0c7d45ffab3ebd23aaec8d71c142143a')]
+  ('persistent', 'organized', 'buyer_agent'): 20 seeds 23-42
+  ('persistent', 'organized_pass', 'buyer_agent'): 20 seeds 23-42
+  ('persistent', 'single_a', 'buyer_agent'): 20 seeds 23-42
+  ('random', 'single_a', 'mediator'): 20 seeds 23-42
+  ('random', 'single_b', 'mediator'): 20 seeds 23-42
+  ('random', 'single_norecord', 'mediator'): 20 seeds 23-42
+
+TEST M: random environment, mediator. d = U0 - Ubar, market profit, events 2-6; exact two-sided sign-flip.
+  U0 - Ubar  n=20  mean +1.114  sd 3.054  se 0.683  95% CI [-0.316, +2.543]  >0: 12/20 (=0: 0)  p 0.1191  not confirmed
+      per seed: s23 +2.98, s24 +2.50, s25 +3.84, s26 -1.61, s27 -0.58, s28 +3.74, s29 -0.09, s30 -2.86, s31 -4.82, s32 +2.95, s33 +1.01, s34 -2.35, s35 -3.09, s36 +1.38, s37 -1.28, s38 +2.11, s39 +2.89, s40 +5.02, s41 +6.26, s42 +4.27
+  Secondary (estimates only):
+    supplier_profit  events 2-6 U0 - Ubar  n=20  mean +1.114  sd 3.054  se 0.683  95% CI [-0.316, +2.543]  >0: 12/20 (=0: 0)
+    supplier_profit  events 2-6 U' - U     n=20  mean +0.887  sd 4.287  se 0.959  95% CI [-1.119, +2.893]  >0: 12/20 (=0: 0)
+    supplier_profit  event 1    U0 - Ubar  n=20  mean +1.473  sd 4.182  se 0.935  95% CI [-0.485, +3.430]  >0: 12/20 (=0: 1)
+    supplier_profit  event 1    U' - U     n=20  mean -1.665  sd 6.545  se 1.463  95% CI [-4.728, +1.398]  >0: 9/20 (=0: 0)
+    buyer_surplus    events 2-6 U0 - Ubar  n=20  mean -3.453  sd 2.610  se 0.584  95% CI [-4.675, -2.232]  >0: 2/20 (=0: 0)
+    buyer_surplus    events 2-6 U' - U     n=20  mean +0.334  sd 3.611  se 0.808  95% CI [-1.356, +2.024]  >0: 13/20 (=0: 0)
+    buyer_surplus    event 1    U0 - Ubar  n=20  mean -0.050  sd 6.355  se 1.421  95% CI [-3.024, +2.924]  >0: 11/20 (=0: 1)
+    buyer_surplus    event 1    U' - U     n=20  mean -0.600  sd 7.712  se 1.725  95% CI [-4.209, +3.009]  >0: 10/20 (=0: 0)
+    joint_surplus    events 2-6 U0 - Ubar  n=20  mean -2.340  sd 4.208  se 0.941  95% CI [-4.309, -0.370]  >0: 7/20 (=0: 0)
+    joint_surplus    events 2-6 U' - U     n=20  mean +1.221  sd 3.506  se 0.784  95% CI [-0.420, +2.862]  >0: 14/20 (=0: 0)
+    joint_surplus    event 1    U0 - Ubar  n=20  mean +1.423  sd 6.778  se 1.516  95% CI [-1.750, +4.595]  >0: 13/20 (=0: 1)
+    joint_surplus    event 1    U' - U     n=20  mean -2.265  sd 9.063  se 2.027  95% CI [-6.507, +1.977]  >0: 6/20 (=0: 3)
+
+TEST C (frozen-code part): persistent environment, buyer's agent. The cut = round-1 price minus the last bid's price, mean over both suppliers and events 2-6. Unadjusted exact two-sided sign-flip p; Holm over C1-C3 is applied once C3 exists.
+  C1 O - U       n=20  mean -0.308  sd 4.021  se 0.899  95% CI [-2.190, +1.573]  >0: 7/20 (=0: 0)  unadjusted p 0.7342
+      per seed: s23 -1.25, s24 +3.70, s25 +0.80, s26 -6.60, s27 -0.42, s28 +4.08, s29 -7.10, s30 -2.66, s31 -2.64, s32 -0.67, s33 -0.15, s34 -0.85, s35 -1.72, s36 -0.43, s37 +7.97, s38 +6.01, s39 -2.79, s40 +3.91, s41 -6.35, s42 +1.00
+  C2 O - O_pass  n=20  mean -0.255  sd 3.895  se 0.871  95% CI [-2.078, +1.568]  >0: 9/20 (=0: 0)  unadjusted p 0.7698
+      per seed: s23 -3.15, s24 -1.45, s25 -1.70, s26 -6.65, s27 +2.84, s28 -3.17, s29 -1.40, s30 -4.06, s31 -0.19, s32 -3.77, s33 -6.00, s34 +4.85, s35 +2.80, s36 +5.37, s37 +0.92, s38 +0.71, s39 -4.34, s40 +4.90, s41 +2.80, s42 +5.60
+  Secondary (estimates only):
+    events 2-6 O - U       cut   n=20  mean -0.308  sd 4.021  se 0.899  95% CI [-2.190, +1.573]  >0: 7/20 (=0: 0)
+    events 2-6 O - U       open  n=20  mean -1.223  sd 8.818  se 1.972  95% CI [-5.350, +2.904]  >0: 9/20 (=0: 0)
+    events 2-6 O - U       final n=20  mean -0.914  sd 10.065  se 2.251  95% CI [-5.625, +3.796]  >0: 8/20 (=0: 0)
+    events 2-6 O - O_pass  cut   n=20  mean -0.255  sd 3.895  se 0.871  95% CI [-2.078, +1.568]  >0: 9/20 (=0: 0)
+    events 2-6 O - O_pass  open  n=20  mean -1.103  sd 10.813  se 2.418  95% CI [-6.164, +3.958]  >0: 11/20 (=0: 0)
+    events 2-6 O - O_pass  final n=20  mean -0.848  sd 10.120  se 2.263  95% CI [-5.584, +3.888]  >0: 9/20 (=0: 0)
+    events 2-6 O_pass - U  cut   n=20  mean -0.054  sd 4.901  se 1.096  95% CI [-2.348, +2.240]  >0: 11/20 (=0: 0)
+    events 2-6 O_pass - U  open  n=20  mean -0.120  sd 7.307  se 1.634  95% CI [-3.540, +3.300]  >0: 9/20 (=0: 0)
+    events 2-6 O_pass - U  final n=20  mean -0.066  sd 8.092  se 1.809  95% CI [-3.853, +3.721]  >0: 9/20 (=0: 0)
+    event 1    O - U       cut   n=20  mean +2.800  sd 9.306  se 2.081  95% CI [-1.555, +7.155]  >0: 12/20 (=0: 1)
+    event 1    O - U       open  n=20  mean -2.250  sd 7.930  se 1.773  95% CI [-5.961, +1.461]  >0: 6/20 (=0: 2)
+    event 1    O - U       final n=20  mean -5.050  sd 11.658  se 2.607  95% CI [-10.506, +0.406]  >0: 7/20 (=0: 0)
+    event 1    O - O_pass  cut   n=20  mean +3.175  sd 8.688  se 1.943  95% CI [-0.891, +7.241]  >0: 12/20 (=0: 1)
+    event 1    O - O_pass  open  n=20  mean -0.225  sd 10.199  se 2.280  95% CI [-4.998, +4.548]  >0: 8/20 (=0: 1)
+    event 1    O - O_pass  final n=20  mean -3.400  sd 11.606  se 2.595  95% CI [-8.832, +2.032]  >0: 7/20 (=0: 0)
+    event 1    O_pass - U  cut   n=20  mean -0.375  sd 7.932  se 1.774  95% CI [-4.087, +3.337]  >0: 11/20 (=0: 0)
+    event 1    O_pass - U  open  n=20  mean -2.025  sd 6.847  se 1.531  95% CI [-5.229, +1.179]  >0: 9/20 (=0: 1)
+    event 1    O_pass - U  final n=20  mean -1.650  sd 8.296  se 1.855  95% CI [-5.533, +2.233]  >0: 6/20 (=0: 1)
+  Levels by arm, events 2-6 (mean over seeds):
+    single_a        cut 2.282  open 127.047  final 124.765  (runs 20)
+    organized       cut 1.974  open 125.825  final 123.851  (runs 20)
+    organized_pass  cut 2.228  open 126.928  final 124.699  (runs 20)

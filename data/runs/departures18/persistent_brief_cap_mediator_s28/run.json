@@ -1,0 +1,124 @@
+{
+  "status": "complete",
+  "error": null,
+  "started_at": "2026-10-17T14:30:08+00:00",
+  "finished_at": "2026-10-17T14:35:23+00:00",
+  "usage": {
+    "requests": 73,
+    "failed_requests": 0,
+    "prompt_tokens": 242210,
+    "completion_tokens": 56218,
+    "largest_completion_tokens": 2051,
+    "truncated": 0,
+    "no_usage": 0,
+    "finish_reasons": {
+      "stop": 73
+    },
+    "http_attempts": 73,
+    "http_responses": {
+      "200": 73
+    },
+    "by_agent": {
+      "analyst_brief_cap": {
+        "requests": 13,
+        "failed_requests": 0,
+        "prompt_tokens": 29147,
+        "completion_tokens": 17358,
+        "largest_completion_tokens": 2051,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 13
+        }
+      },
+      "bidder_brief_cap": {
+        "requests": 36,
+        "failed_requests": 0,
+        "prompt_tokens": 64949,
+        "completion_tokens": 20853,
+        "largest_completion_tokens": 947,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 36
+        }
+      },
+      "mediator": {
+        "requests": 24,
+        "failed_requests": 0,
+        "prompt_tokens": 148114,
+        "completion_tokens": 18007,
+        "largest_completion_tokens": 1037,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 24
+        }
+      }
+    }
+  },
+  "argv": [
+    "--backend",
+    "openai",
+    "--hosted",
+    "--default-sampling",
+    "--no-tools",
+    "--base-url",
+    "https://api.anthropic.com/v1/",
+    "--model",
+    "claude-haiku-5-5",
+    "--max-tokens",
+    "16000",
+    "--max-retries",
+    "30",
+    "--timeout",
+    "300",
+    "--prompts",
+    "primitives",
+    "--events",
+    "6",
+    "--rounds",
+    "3",
+    "--environment",
+    "persistent",
+    "--institutions",
+    "mediator",
+    "--organizations",
+    "brief_cap",
+    "--seeds",
+    "28",
+    "--out",
+    "outputs/departures18/persistent_brief_cap_mediator_s28"
+  ],
+  "backend": "openai",
+  "model": "claude-haiku-5-5",
+  "base_url": "https://api.anthropic.com/v1/",
+  "hosted": true,
+  "default_sampling": true,
+  "max_tokens": 16000,
+  "max_retries": 30,
+  "timeout": 300,
+  "no_tools": true,
+  "institutions": [
+    "mediator"
+  ],
+  "organizations": [
+    "brief_cap"
+  ],
+  "mixed": null,
+  "prompts": "primitives",
+  "environment": "persistent",
+  "events": 6,
+  "rounds": 3,
+  "max_history_events": 0,
+  "seeds": [
+    28
+  ],
+  "debug_log": null,
+  "git_commit": "653e656f335d0889220a2b058a87e8399fd87b6b",
+  "git_dirty": false,
+  "source_sha256": "b4d072575b9f994252c5150a7976d2a10804e01eee6c5fdc5f2f770874d7d704",
+  "python": "3.14.3",
+  "numpy": "2.4.2",
+  "openai": "2.26.0"
+}

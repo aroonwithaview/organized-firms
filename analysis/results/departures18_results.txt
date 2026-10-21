@@ -1,0 +1,472 @@
+Departures stage. Roots: data/runs/departures18; frozen: data/runs/confirm17_concession
+  departures: runs 640; integrity problems 0; (commit, dirty, source): [('653e656f335d0889220a2b058a87e8399fd87b6b', False, 'b4d072575b9f994252c5150a7976d2a10804e01eee6c5fdc5f2f770874d7d704')]
+    bids priced by the cost + 5% rule: 0
+  frozen: runs 60; integrity problems 0; (commit, dirty, source): [('9f1cf25aecb0ebb02dcafb7cd46a2d2844208083', False, '46258eff7f4a97117cc9b4bfb10693be0c7d45ffab3ebd23aaec8d71c142143a')]
+    bids priced by the cost + 5% rule: 0
+  departures cells 32; cells missing seeds: none
+  floor messages in which the bidder still reads a line beginning with the floor label: 0 of 1200
+
+GATE: event-1 final-bid margin, conflict minus team, homogeneous B and F cells, institutions pooled.
+  n=20  mean -1.011  sd 2.047  se 0.458  95% CI [-1.969, -0.053]  >0: 5/20 (=0: 0)  p 0.0405  PASSED
+      per seed: s23 -3.01, s24 +0.85, s25 -0.52, s26 +0.42, s27 -0.49, s28 +0.81, s29 -4.22, s30 -0.36, s31 -0.40, s32 +4.08, s33 +1.17, s34 -1.84, s35 -0.78, s36 -3.41, s37 -1.92, s38 -2.70, s39 -0.04, s40 -2.75, s41 -4.23, s42 -0.87
+
+PRIMARY FAMILY (events 2-6, institutions pooled; exact two-sided sign-flip; Holm over four)
+  H1 mixed B:F gap, conflict (firm profit)           n=20  mean +2.147  sd 2.974  se 0.665  95% CI [+0.756, +3.539]  >0: 15/20 (=0: 0)  p 0.0046  Holm p 0.0185  [> 0]
+      per seed: s23 +5.51, s24 -1.66, s25 -0.88, s26 -2.03, s27 +1.22, s28 +8.03, s29 +4.69, s30 +3.19, s31 +0.40, s32 -0.22, s33 +0.89, s34 +2.15, s35 +2.15, s36 +3.86, s37 +5.15, s38 +5.34, s39 +5.83, s40 +0.26, s41 -2.64, s42 +1.70
+  H2 margin DiD (B - F)_conf - (B - F)_team          n=20  mean +0.580  sd 3.743  se 0.837  95% CI [-1.172, +2.332]  >0: 12/20 (=0: 0)  p 0.5489  Holm p 1.0000  [~ 0]
+      per seed: s23 -4.63, s24 +2.21, s25 -1.71, s26 +1.07, s27 +0.28, s28 -5.52, s29 +1.29, s30 +2.32, s31 -2.22, s32 +12.72, s33 +1.57, s34 +3.70, s35 -3.15, s36 -0.43, s37 -0.98, s38 +1.50, s39 -1.08, s40 +1.39, s41 +1.21, s42 +2.06
+  H3 mixed Floor:B gap, conflict (firm profit)       n=20  mean -0.062  sd 1.929  se 0.431  95% CI [-0.965, +0.841]  >0: 11/20 (=0: 0)  p 0.8863  Holm p 1.0000  [~ 0]
+      per seed: s23 -2.11, s24 -2.86, s25 -1.35, s26 +0.73, s27 +0.41, s28 +2.29, s29 +0.90, s30 -1.82, s31 -0.37, s32 +0.70, s33 +1.43, s34 -0.17, s35 -2.64, s36 +1.36, s37 -1.04, s38 +1.95, s39 +1.09, s40 +0.10, s41 +3.86, s42 -3.70
+  H4 margin DiD (Floor - B)_conf - (Floor - B)_team  n=20  mean -0.491  sd 3.524  se 0.788  95% CI [-2.141, +1.158]  >0: 7/20 (=0: 0)  p 0.6077  Holm p 1.0000  [~ 0]
+      per seed: s23 +3.06, s24 -0.68, s25 +3.57, s26 -0.05, s27 -0.13, s28 -0.80, s29 +2.26, s30 -1.89, s31 -0.18, s32 -12.30, s33 -0.95, s34 -3.46, s35 -2.21, s36 +0.81, s37 -2.08, s38 +4.55, s39 +1.18, s40 +2.72, s41 -1.43, s42 -1.83
+
+CONCESSION FAMILY (buyer's agent, events 2-6; exact two-sided sign-flip; Holm over three).
+  C1 O - U (frozen code)               n=20  mean -0.308  sd 4.021  se 0.899  95% CI [-2.190, +1.573]  >0: 7/20 (=0: 0)  p 0.7342  Holm p 1.0000
+      per seed: s23 -1.25, s24 +3.70, s25 +0.80, s26 -6.60, s27 -0.42, s28 +4.08, s29 -7.10, s30 -2.66, s31 -2.64, s32 -0.67, s33 -0.15, s34 -0.85, s35 -1.72, s36 -0.43, s37 +7.97, s38 +6.01, s39 -2.79, s40 +3.91, s41 -6.35, s42 +1.00
+  C2 O - O_pass (frozen code)          n=20  mean -0.255  sd 3.895  se 0.871  95% CI [-2.078, +1.568]  >0: 9/20 (=0: 0)  p 0.7698  Holm p 1.0000
+      per seed: s23 -3.15, s24 -1.45, s25 -1.70, s26 -6.65, s27 +2.84, s28 -3.17, s29 -1.40, s30 -4.06, s31 -0.19, s32 -3.77, s33 -6.00, s34 +4.85, s35 +2.80, s36 +5.37, s37 +0.92, s38 +0.71, s39 -4.34, s40 +4.90, s41 +2.80, s42 +5.60
+  C3 B - F (departures code, team)     n=20  mean -0.941  sd 4.110  se 0.919  95% CI [-2.865, +0.982]  >0: 10/20 (=0: 0)  p 0.3327  Holm p 0.9981
+      per seed: s23 +2.30, s24 -0.90, s25 -3.47, s26 +1.01, s27 -5.80, s28 -2.20, s29 +2.35, s30 -4.09, s31 +0.90, s32 -3.55, s33 +0.80, s34 +0.90, s35 -1.47, s36 +2.15, s37 +4.10, s38 +2.80, s39 -3.07, s40 -12.47, s41 +5.30, s42 -4.40
+
+SECONDARY (estimates only).
+  [events 2-6]
+    The primary statistics in this window, institutions pooled and per institution:
+      mediator+buyer_agent  H1 mixed B:F gap, conflict (firm profit)           n=20  mean +2.147  sd 2.974  se 0.665  95% CI [+0.756, +3.539]  >0: 15/20 (=0: 0)
+      mediator+buyer_agent  H2 margin DiD (B - F)_conf - (B - F)_team          n=20  mean +0.580  sd 3.743  se 0.837  95% CI [-1.172, +2.332]  >0: 12/20 (=0: 0)
+      mediator+buyer_agent  H3 mixed Floor:B gap, conflict (firm profit)       n=20  mean -0.062  sd 1.929  se 0.431  95% CI [-0.965, +0.841]  >0: 11/20 (=0: 0)
+      mediator+buyer_agent  H4 margin DiD (Floor - B)_conf - (Floor - B)_team  n=20  mean -0.491  sd 3.524  se 0.788  95% CI [-2.141, +1.158]  >0: 7/20 (=0: 0)
+      mediator              H1 mixed B:F gap, conflict (firm profit)           n=20  mean +3.605  sd 6.438  se 1.440  95% CI [+0.592, +6.618]  >0: 14/20 (=0: 0)
+      mediator              H2 margin DiD (B - F)_conf - (B - F)_team          n=20  mean -0.143  sd 5.283  se 1.181  95% CI [-2.615, +2.329]  >0: 11/20 (=0: 0)
+      mediator              H3 mixed Floor:B gap, conflict (firm profit)       n=20  mean -0.158  sd 3.267  se 0.730  95% CI [-1.687, +1.371]  >0: 12/20 (=0: 0)
+      mediator              H4 margin DiD (Floor - B)_conf - (Floor - B)_team  n=20  mean -0.316  sd 5.247  se 1.173  95% CI [-2.772, +2.139]  >0: 10/20 (=0: 0)
+      buyer_agent           H1 mixed B:F gap, conflict (firm profit)           n=20  mean +0.690  sd 1.936  se 0.433  95% CI [-0.216, +1.596]  >0: 12/20 (=0: 0)
+      buyer_agent           H2 margin DiD (B - F)_conf - (B - F)_team          n=20  mean +1.303  sd 4.835  se 1.081  95% CI [-0.960, +3.566]  >0: 9/20 (=0: 0)
+      buyer_agent           H3 mixed Floor:B gap, conflict (firm profit)       n=20  mean +0.033  sd 2.460  se 0.550  95% CI [-1.118, +1.184]  >0: 11/20 (=0: 0)
+      buyer_agent           H4 margin DiD (Floor - B)_conf - (Floor - B)_team  n=20  mean -0.666  sd 4.234  se 0.947  95% CI [-2.648, +1.315]  >0: 11/20 (=0: 0)
+    Team benchmark for the channel, B - F under team objectives (homogeneous):
+      profit     n=20  mean -0.008  sd 2.637  se 0.590  95% CI [-1.242, +1.226]  >0: 10/20 (=0: 0)
+      margin     n=20  mean -0.043  sd 1.278  se 0.286  95% CI [-0.641, +0.555]  >0: 11/20 (=0: 0)
+      buyer      n=20  mean -0.314  sd 3.577  se 0.800  95% CI [-1.988, +1.360]  >0: 9/20 (=0: 0)
+      joint      n=20  mean -0.321  sd 3.761  se 0.841  95% CI [-2.081, +1.439]  >0: 10/20 (=0: 0)
+      mixed B:F gap, team (firm profit) n=20  mean +0.243  sd 1.910  se 0.427  95% CI [-0.650, +1.137]  >0: 9/20 (=0: 0)
+    Agency costs, conflict minus team (homogeneous):
+      F_conf - F_team        profit     n=20  mean +1.328  sd 2.630  se 0.588  95% CI [+0.097, +2.559]  >0: 17/20 (=0: 0)
+      F_conf - F_team        margin     n=20  mean +0.632  sd 2.096  se 0.469  95% CI [-0.349, +1.613]  >0: 11/20 (=0: 0)
+      F_conf - F_team        buyer      n=20  mean -5.491  sd 5.436  se 1.216  95% CI [-8.035, -2.947]  >0: 2/20 (=0: 1)
+      F_conf - F_team        joint      n=20  mean -4.163  sd 5.260  se 1.176  95% CI [-6.625, -1.701]  >0: 4/20 (=0: 0)
+      F_conf - F_team        below_cost n=20  mean +0.063  sd 0.076  se 0.017  95% CI [+0.027, +0.098]  >0: 12/20 (=0: 8)
+      F_conf - F_team        loss_win   n=20  mean +0.020  sd 0.070  se 0.016  95% CI [-0.013, +0.053]  >0: 2/20 (=0: 18)
+      B_conf - B_team        profit     n=20  mean +1.556  sd 4.714  se 1.054  95% CI [-0.650, +3.763]  >0: 12/20 (=0: 0)
+      B_conf - B_team        margin     n=20  mean +1.212  sd 3.173  se 0.709  95% CI [-0.273, +2.697]  >0: 16/20 (=0: 0)
+      B_conf - B_team        buyer      n=20  mean -2.512  sd 4.979  se 1.113  95% CI [-4.842, -0.181]  >0: 6/20 (=0: 1)
+      B_conf - B_team        joint      n=20  mean -0.955  sd 4.940  se 1.105  95% CI [-3.267, +1.357]  >0: 9/20 (=0: 0)
+      B_conf - B_team        below_cost n=20  mean +0.008  sd 0.018  se 0.004  95% CI [-0.001, +0.016]  >0: 3/20 (=0: 17)
+      B_conf - B_team        loss_win   n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+      Floor_conf - Floor_team profit     n=20  mean +1.458  sd 3.881  se 0.868  95% CI [-0.359, +3.274]  >0: 16/20 (=0: 0)
+      Floor_conf - Floor_team margin     n=20  mean +0.721  sd 1.870  se 0.418  95% CI [-0.154, +1.596]  >0: 16/20 (=0: 0)
+      Floor_conf - Floor_team buyer      n=20  mean -3.151  sd 5.607  se 1.254  95% CI [-5.775, -0.526]  >0: 3/20 (=0: 0)
+      Floor_conf - Floor_team joint      n=20  mean -1.693  sd 4.557  se 1.019  95% CI [-3.826, +0.440]  >0: 6/20 (=0: 0)
+      Floor_conf - Floor_team below_cost n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+      Floor_conf - Floor_team loss_win   n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    Surplus DiDs (as H2 and H4):
+      H2-type buyer   n=20  mean +2.979  sd 4.160  se 0.930  95% CI [+1.032, +4.926]  >0: 13/20 (=0: 0)
+      H4-type buyer   n=20  mean -0.639  sd 6.538  se 1.462  95% CI [-3.699, +2.421]  >0: 9/20 (=0: 0)
+      H2-type joint   n=20  mean +3.208  sd 6.234  se 1.394  95% CI [+0.290, +6.125]  >0: 16/20 (=0: 0)
+      H4-type joint   n=20  mean -0.738  sd 7.190  se 1.608  95% CI [-4.103, +2.627]  >0: 11/20 (=0: 0)
+      H2-type profit  n=20  mean +0.228  sd 5.274  se 1.179  95% CI [-2.240, +2.697]  >0: 10/20 (=0: 0)
+      H4-type profit  n=20  mean -0.099  sd 5.243  se 1.172  95% CI [-2.553, +2.355]  >0: 10/20 (=0: 0)
+    Mixed gaps by position (xa: X is supplier A; xb: X is supplier B):
+      brief_revenue:forward_revenue      xa n=20  mean +1.335  sd 7.222  se 1.615  95% CI [-2.045, +4.715]  >0: 10/20 (=0: 0)
+      brief_revenue:forward_revenue      xb n=20  mean +2.959  sd 5.653  se 1.264  95% CI [+0.314, +5.605]  >0: 12/20 (=0: 0)
+      brief:forward                      xa n=20  mean -1.284  sd 6.741  se 1.507  95% CI [-4.439, +1.872]  >0: 10/20 (=0: 0)
+      brief:forward                      xb n=20  mean +1.770  sd 7.409  se 1.657  95% CI [-1.697, +5.238]  >0: 11/20 (=0: 0)
+      floor_revenue:brief_revenue        xa n=20  mean -1.323  sd 6.571  se 1.469  95% CI [-4.399, +1.752]  >0: 8/20 (=0: 0)
+      floor_revenue:brief_revenue        xb n=20  mean +1.199  sd 7.576  se 1.694  95% CI [-2.347, +4.744]  >0: 11/20 (=0: 0)
+    Payoffs of choosing B against a rival's organization, per objective:
+      team      pi(B|F) - pi(F|F) n=20  mean +0.079  sd 1.212  se 0.271  95% CI [-0.488, +0.646]  >0: 11/20 (=0: 0)
+      team      pi(B|B) - pi(F|B) n=20  mean +0.160  sd 1.455  se 0.325  95% CI [-0.520, +0.841]  >0: 13/20 (=0: 0)
+      conflict  pi(B|F) - pi(F|F) n=20  mean +0.479  sd 2.042  se 0.457  95% CI [-0.477, +1.435]  >0: 12/20 (=0: 0)
+      conflict  pi(B|B) - pi(F|B) n=20  mean +1.779  sd 2.472  se 0.553  95% CI [+0.622, +2.936]  >0: 15/20 (=0: 0)
+    Tier 2 (exploratory), homogeneous:
+      Cap - B team   profit  n=20  mean -0.432  sd 2.848  se 0.637  95% CI [-1.765, +0.901]  >0: 9/20 (=0: 0)
+      Cap - B conf   profit  n=20  mean -0.340  sd 5.212  se 1.165  95% CI [-2.779, +2.099]  >0: 11/20 (=0: 0)
+      (Cap - B) DiD  profit  n=20  mean +0.092  sd 5.715  se 1.278  95% CI [-2.583, +2.767]  >0: 11/20 (=0: 0)
+      Cap - B team   margin  n=20  mean -0.079  sd 1.399  se 0.313  95% CI [-0.734, +0.576]  >0: 10/20 (=0: 0)
+      Cap - B conf   margin  n=20  mean -0.667  sd 3.588  se 0.802  95% CI [-2.346, +1.013]  >0: 10/20 (=0: 0)
+      (Cap - B) DiD  margin  n=20  mean -0.587  sd 3.916  se 0.876  95% CI [-2.420, +1.245]  >0: 8/20 (=0: 0)
+      Cap - B team   buyer   n=20  mean +1.186  sd 4.373  se 0.978  95% CI [-0.861, +3.232]  >0: 14/20 (=0: 0)
+      Cap - B conf   buyer   n=20  mean -0.688  sd 4.203  se 0.940  95% CI [-2.655, +1.279]  >0: 8/20 (=0: 0)
+      (Cap - B) DiD  buyer   n=20  mean -1.874  sd 3.955  se 0.884  95% CI [-3.725, -0.023]  >0: 7/20 (=0: 0)
+      Cap - B team   joint   n=20  mean +0.754  sd 4.619  se 1.033  95% CI [-1.408, +2.915]  >0: 10/20 (=0: 0)
+      Cap - B conf   joint   n=20  mean -1.028  sd 4.622  se 1.033  95% CI [-3.191, +1.135]  >0: 8/20 (=0: 0)
+      (Cap - B) DiD  joint   n=20  mean -1.782  sd 5.801  se 1.297  95% CI [-4.497, +0.933]  >0: 8/20 (=0: 0)
+      Cost - B team  profit  n=20  mean +0.202  sd 2.985  se 0.667  95% CI [-1.195, +1.599]  >0: 9/20 (=0: 0)
+      Cost - B conf  profit  n=20  mean -1.270  sd 4.882  se 1.092  95% CI [-3.555, +1.015]  >0: 8/20 (=0: 1)
+      (Cost - B) DiD profit  n=20  mean -1.472  sd 6.107  se 1.366  95% CI [-4.330, +1.386]  >0: 9/20 (=0: 0)
+      Cost - B team  margin  n=20  mean +0.254  sd 1.778  se 0.398  95% CI [-0.578, +1.087]  >0: 8/20 (=0: 0)
+      Cost - B conf  margin  n=20  mean -0.655  sd 3.167  se 0.708  95% CI [-2.137, +0.827]  >0: 7/20 (=0: 0)
+      (Cost - B) DiD margin  n=20  mean -0.909  sd 4.206  se 0.940  95% CI [-2.878, +1.059]  >0: 8/20 (=0: 0)
+      Cost - B team  buyer   n=20  mean +1.268  sd 4.605  se 1.030  95% CI [-0.888, +3.423]  >0: 12/20 (=0: 0)
+      Cost - B conf  buyer   n=20  mean +0.352  sd 5.540  se 1.239  95% CI [-2.241, +2.945]  >0: 11/20 (=0: 0)
+      (Cost - B) DiD buyer   n=20  mean -0.916  sd 7.641  se 1.709  95% CI [-4.492, +2.660]  >0: 7/20 (=0: 0)
+      Cost - B team  joint   n=20  mean +1.469  sd 5.097  se 1.140  95% CI [-0.916, +3.855]  >0: 15/20 (=0: 0)
+      Cost - B conf  joint   n=20  mean -0.918  sd 5.394  se 1.206  95% CI [-3.442, +1.606]  >0: 10/20 (=0: 0)
+      (Cost - B) DiD joint   n=20  mean -2.387  sd 7.984  se 1.785  95% CI [-6.124, +1.349]  >0: 4/20 (=0: 0)
+  [event 1]
+    The primary statistics in this window, institutions pooled and per institution:
+      mediator+buyer_agent  H1 mixed B:F gap, conflict (firm profit)           n=20  mean -0.692  sd 3.155  se 0.706  95% CI [-2.169, +0.785]  >0: 8/20 (=0: 0)
+      mediator+buyer_agent  H2 margin DiD (B - F)_conf - (B - F)_team          n=20  mean +1.155  sd 3.935  se 0.880  95% CI [-0.686, +2.997]  >0: 12/20 (=0: 0)
+      mediator+buyer_agent  H3 mixed Floor:B gap, conflict (firm profit)       n=20  mean +0.153  sd 4.610  se 1.031  95% CI [-2.004, +2.311]  >0: 10/20 (=0: 0)
+      mediator+buyer_agent  H4 margin DiD (Floor - B)_conf - (Floor - B)_team  n=20  mean +0.380  sd 3.809  se 0.852  95% CI [-1.402, +2.163]  >0: 10/20 (=0: 0)
+      mediator              H1 mixed B:F gap, conflict (firm profit)           n=20  mean -1.845  sd 5.711  se 1.277  95% CI [-4.518, +0.828]  >0: 7/20 (=0: 0)
+      mediator              H2 margin DiD (B - F)_conf - (B - F)_team          n=20  mean +1.833  sd 7.560  se 1.690  95% CI [-1.705, +5.371]  >0: 13/20 (=0: 0)
+      mediator              H3 mixed Floor:B gap, conflict (firm profit)       n=20  mean +0.912  sd 7.464  se 1.669  95% CI [-2.581, +4.406]  >0: 11/20 (=0: 1)
+      mediator              H4 margin DiD (Floor - B)_conf - (Floor - B)_team  n=20  mean +0.716  sd 8.201  se 1.834  95% CI [-3.122, +4.554]  >0: 9/20 (=0: 0)
+      buyer_agent           H1 mixed B:F gap, conflict (firm profit)           n=20  mean +0.461  sd 3.153  se 0.705  95% CI [-1.015, +1.936]  >0: 11/20 (=0: 0)
+      buyer_agent           H2 margin DiD (B - F)_conf - (B - F)_team          n=20  mean +0.478  sd 4.113  se 0.920  95% CI [-1.447, +2.403]  >0: 11/20 (=0: 0)
+      buyer_agent           H3 mixed Floor:B gap, conflict (firm profit)       n=20  mean -0.606  sd 3.802  se 0.850  95% CI [-2.385, +1.174]  >0: 9/20 (=0: 1)
+      buyer_agent           H4 margin DiD (Floor - B)_conf - (Floor - B)_team  n=20  mean +0.045  sd 4.366  se 0.976  95% CI [-1.999, +2.088]  >0: 11/20 (=0: 0)
+    Team benchmark for the channel, B - F under team objectives (homogeneous):
+      profit     n=20  mean +0.360  sd 4.014  se 0.897  95% CI [-1.518, +2.238]  >0: 11/20 (=0: 0)
+      margin     n=20  mean +0.117  sd 2.954  se 0.661  95% CI [-1.266, +1.499]  >0: 9/20 (=0: 0)
+      buyer      n=20  mean -1.483  sd 4.942  se 1.105  95% CI [-3.796, +0.830]  >0: 8/20 (=0: 0)
+      joint      n=20  mean -1.123  sd 6.488  se 1.451  95% CI [-4.159, +1.914]  >0: 10/20 (=0: 2)
+      mixed B:F gap, team (firm profit) n=20  mean +0.646  sd 3.258  se 0.728  95% CI [-0.879, +2.171]  >0: 11/20 (=0: 1)
+    Agency costs, conflict minus team (homogeneous):
+      F_conf - F_team        profit     n=20  mean -1.162  sd 4.234  se 0.947  95% CI [-3.144, +0.819]  >0: 7/20 (=0: 0)
+      F_conf - F_team        margin     n=20  mean -1.589  sd 2.400  se 0.537  95% CI [-2.712, -0.466]  >0: 5/20 (=0: 0)
+      F_conf - F_team        buyer      n=20  mean -3.244  sd 5.098  se 1.140  95% CI [-5.630, -0.858]  >0: 8/20 (=0: 0)
+      F_conf - F_team        joint      n=20  mean -4.406  sd 4.885  se 1.092  95% CI [-6.692, -2.120]  >0: 3/20 (=0: 3)
+      F_conf - F_team        below_cost n=20  mean +0.050  sd 0.103  se 0.023  95% CI [+0.002, +0.098]  >0: 4/20 (=0: 16)
+      F_conf - F_team        loss_win   n=20  mean +0.025  sd 0.112  se 0.025  95% CI [-0.027, +0.077]  >0: 1/20 (=0: 19)
+      B_conf - B_team        profit     n=20  mean -1.061  sd 3.874  se 0.866  95% CI [-2.874, +0.752]  >0: 8/20 (=0: 0)
+      B_conf - B_team        margin     n=20  mean -0.434  sd 3.219  se 0.720  95% CI [-1.940, +1.073]  >0: 7/20 (=0: 0)
+      B_conf - B_team        buyer      n=20  mean -0.597  sd 4.904  se 1.097  95% CI [-2.892, +1.698]  >0: 7/20 (=0: 0)
+      B_conf - B_team        joint      n=20  mean -1.658  sd 5.757  se 1.287  95% CI [-4.352, +1.036]  >0: 8/20 (=0: 0)
+      B_conf - B_team        below_cost n=20  mean +0.050  sd 0.131  se 0.029  95% CI [-0.011, +0.111]  >0: 3/20 (=0: 17)
+      B_conf - B_team        loss_win   n=20  mean +0.075  sd 0.183  se 0.041  95% CI [-0.011, +0.161]  >0: 3/20 (=0: 17)
+      Floor_conf - Floor_team profit     n=20  mean +0.312  sd 2.546  se 0.569  95% CI [-0.879, +1.504]  >0: 11/20 (=0: 0)
+      Floor_conf - Floor_team margin     n=20  mean -0.053  sd 3.262  se 0.729  95% CI [-1.580, +1.473]  >0: 8/20 (=0: 0)
+      Floor_conf - Floor_team buyer      n=20  mean -3.388  sd 5.358  se 1.198  95% CI [-5.896, -0.881]  >0: 4/20 (=0: 0)
+      Floor_conf - Floor_team joint      n=20  mean -3.076  sd 5.661  se 1.266  95% CI [-5.725, -0.426]  >0: 6/20 (=0: 1)
+      Floor_conf - Floor_team below_cost n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+      Floor_conf - Floor_team loss_win   n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    Surplus DiDs (as H2 and H4):
+      H2-type buyer   n=20  mean +2.647  sd 5.542  se 1.239  95% CI [+0.053, +5.241]  >0: 14/20 (=0: 0)
+      H4-type buyer   n=20  mean -2.791  sd 7.982  se 1.785  95% CI [-6.527, +0.944]  >0: 8/20 (=0: 0)
+      H2-type joint   n=20  mean +2.748  sd 5.467  se 1.222  95% CI [+0.190, +5.307]  >0: 12/20 (=0: 0)
+      H4-type joint   n=20  mean -1.418  sd 8.408  se 1.880  95% CI [-5.352, +2.517]  >0: 10/20 (=0: 0)
+      H2-type profit  n=20  mean +0.101  sd 5.636  se 1.260  95% CI [-2.537, +2.739]  >0: 10/20 (=0: 0)
+      H4-type profit  n=20  mean +1.374  sd 4.636  se 1.037  95% CI [-0.796, +3.544]  >0: 12/20 (=0: 0)
+    Mixed gaps by position (xa: X is supplier A; xb: X is supplier B):
+      brief_revenue:forward_revenue      xa n=20  mean -1.184  sd 7.483  se 1.673  95% CI [-4.686, +2.319]  >0: 9/20 (=0: 0)
+      brief_revenue:forward_revenue      xb n=20  mean -0.201  sd 6.402  se 1.432  95% CI [-3.197, +2.796]  >0: 10/20 (=0: 1)
+      brief:forward                      xa n=20  mean -1.296  sd 6.874  se 1.537  95% CI [-4.513, +1.922]  >0: 9/20 (=0: 1)
+      brief:forward                      xb n=20  mean +2.588  sd 6.737  se 1.506  95% CI [-0.565, +5.740]  >0: 13/20 (=0: 0)
+      floor_revenue:brief_revenue        xa n=20  mean +0.385  sd 7.816  se 1.748  95% CI [-3.273, +4.043]  >0: 11/20 (=0: 0)
+      floor_revenue:brief_revenue        xb n=20  mean -0.078  sd 9.788  se 2.189  95% CI [-4.659, +4.503]  >0: 8/20 (=0: 0)
+    Payoffs of choosing B against a rival's organization, per objective:
+      team      pi(B|F) - pi(F|F) n=20  mean +0.099  sd 1.926  se 0.431  95% CI [-0.802, +1.001]  >0: 10/20 (=0: 0)
+      team      pi(B|B) - pi(F|B) n=20  mean +0.727  sd 2.017  se 0.451  95% CI [-0.217, +1.670]  >0: 14/20 (=0: 0)
+      conflict  pi(B|F) - pi(F|F) n=20  mean -0.449  sd 2.940  se 0.657  95% CI [-1.825, +0.927]  >0: 8/20 (=0: 0)
+      conflict  pi(B|B) - pi(F|B) n=20  mean -0.012  sd 2.439  se 0.545  95% CI [-1.154, +1.129]  >0: 9/20 (=0: 0)
+    Tier 2 (exploratory), homogeneous:
+      Cap - B team   profit  n=20  mean -1.374  sd 3.420  se 0.765  95% CI [-2.974, +0.227]  >0: 6/20 (=0: 0)
+      Cap - B conf   profit  n=20  mean -0.280  sd 4.652  se 1.040  95% CI [-2.457, +1.897]  >0: 11/20 (=0: 0)
+      (Cap - B) DiD  profit  n=20  mean +1.094  sd 5.588  se 1.250  95% CI [-1.522, +3.709]  >0: 13/20 (=0: 0)
+      Cap - B team   margin  n=20  mean -0.534  sd 3.020  se 0.675  95% CI [-1.948, +0.879]  >0: 6/20 (=0: 0)
+      Cap - B conf   margin  n=20  mean -0.491  sd 3.201  se 0.716  95% CI [-1.989, +1.007]  >0: 10/20 (=0: 0)
+      (Cap - B) DiD  margin  n=20  mean +0.043  sd 4.509  se 1.008  95% CI [-2.067, +2.153]  >0: 10/20 (=0: 0)
+      Cap - B team   buyer   n=20  mean +2.073  sd 5.042  se 1.127  95% CI [-0.286, +4.433]  >0: 16/20 (=0: 0)
+      Cap - B conf   buyer   n=20  mean -0.383  sd 4.825  se 1.079  95% CI [-2.641, +1.875]  >0: 7/20 (=0: 0)
+      (Cap - B) DiD  buyer   n=20  mean -2.456  sd 5.241  se 1.172  95% CI [-4.909, -0.003]  >0: 8/20 (=0: 0)
+      Cap - B team   joint   n=20  mean +0.700  sd 6.122  se 1.369  95% CI [-2.165, +3.565]  >0: 13/20 (=0: 0)
+      Cap - B conf   joint   n=20  mean -0.663  sd 5.055  se 1.130  95% CI [-3.029, +1.703]  >0: 9/20 (=0: 0)
+      (Cap - B) DiD  joint   n=20  mean -1.362  sd 6.470  se 1.447  95% CI [-4.391, +1.666]  >0: 9/20 (=0: 0)
+      Cost - B team  profit  n=20  mean +0.024  sd 3.995  se 0.893  95% CI [-1.845, +1.894]  >0: 9/20 (=0: 0)
+      Cost - B conf  profit  n=20  mean -1.297  sd 4.288  se 0.959  95% CI [-3.304, +0.709]  >0: 7/20 (=0: 0)
+      (Cost - B) DiD profit  n=20  mean -1.322  sd 5.976  se 1.336  95% CI [-4.119, +1.475]  >0: 9/20 (=0: 1)
+      Cost - B team  margin  n=20  mean -0.253  sd 2.462  se 0.551  95% CI [-1.405, +0.900]  >0: 10/20 (=0: 0)
+      Cost - B conf  margin  n=20  mean -0.878  sd 2.682  se 0.600  95% CI [-2.133, +0.378]  >0: 7/20 (=0: 0)
+      (Cost - B) DiD margin  n=20  mean -0.625  sd 3.471  se 0.776  95% CI [-2.250, +1.000]  >0: 7/20 (=0: 0)
+      Cost - B team  buyer   n=20  mean +2.152  sd 6.086  se 1.361  95% CI [-0.697, +5.000]  >0: 13/20 (=0: 0)
+      Cost - B conf  buyer   n=20  mean +0.128  sd 5.974  se 1.336  95% CI [-2.668, +2.924]  >0: 10/20 (=0: 1)
+      (Cost - B) DiD buyer   n=20  mean -2.023  sd 7.934  se 1.774  95% CI [-5.737, +1.690]  >0: 7/20 (=0: 1)
+      Cost - B team  joint   n=20  mean +2.176  sd 7.213  se 1.613  95% CI [-1.200, +5.552]  >0: 14/20 (=0: 1)
+      Cost - B conf  joint   n=20  mean -1.169  sd 5.605  se 1.253  95% CI [-3.792, +1.454]  >0: 8/20 (=0: 0)
+      (Cost - B) DiD joint   n=20  mean -3.345  sd 8.784  se 1.964  95% CI [-7.456, +0.765]  >0: 6/20 (=0: 0)
+  [events 2-5]
+    The primary statistics in this window, institutions pooled and per institution:
+      mediator+buyer_agent  H1 mixed B:F gap, conflict (firm profit)           n=20  mean +2.095  sd 2.917  se 0.652  95% CI [+0.730, +3.460]  >0: 15/20 (=0: 0)
+      mediator+buyer_agent  H2 margin DiD (B - F)_conf - (B - F)_team          n=20  mean +0.685  sd 3.884  se 0.869  95% CI [-1.133, +2.503]  >0: 13/20 (=0: 0)
+      mediator+buyer_agent  H3 mixed Floor:B gap, conflict (firm profit)       n=20  mean -0.118  sd 1.929  se 0.431  95% CI [-1.021, +0.785]  >0: 10/20 (=0: 0)
+      mediator+buyer_agent  H4 margin DiD (Floor - B)_conf - (Floor - B)_team  n=20  mean -0.422  sd 3.464  se 0.775  95% CI [-2.043, +1.199]  >0: 9/20 (=0: 0)
+      mediator              H1 mixed B:F gap, conflict (firm profit)           n=20  mean +3.728  sd 6.571  se 1.469  95% CI [+0.652, +6.803]  >0: 13/20 (=0: 0)
+      mediator              H2 margin DiD (B - F)_conf - (B - F)_team          n=20  mean +0.330  sd 5.215  se 1.166  95% CI [-2.111, +2.771]  >0: 12/20 (=0: 0)
+      mediator              H3 mixed Floor:B gap, conflict (firm profit)       n=20  mean -0.171  sd 3.532  se 0.790  95% CI [-1.824, +1.482]  >0: 12/20 (=0: 0)
+      mediator              H4 margin DiD (Floor - B)_conf - (Floor - B)_team  n=20  mean -0.067  sd 5.011  se 1.120  95% CI [-2.412, +2.278]  >0: 11/20 (=0: 0)
+      buyer_agent           H1 mixed B:F gap, conflict (firm profit)           n=20  mean +0.463  sd 2.018  se 0.451  95% CI [-0.482, +1.407]  >0: 10/20 (=0: 0)
+      buyer_agent           H2 margin DiD (B - F)_conf - (B - F)_team          n=20  mean +1.040  sd 4.918  se 1.100  95% CI [-1.262, +3.342]  >0: 10/20 (=0: 0)
+      buyer_agent           H3 mixed Floor:B gap, conflict (firm profit)       n=20  mean -0.065  sd 2.431  se 0.544  95% CI [-1.203, +1.072]  >0: 10/20 (=0: 1)
+      buyer_agent           H4 margin DiD (Floor - B)_conf - (Floor - B)_team  n=20  mean -0.777  sd 4.265  se 0.954  95% CI [-2.773, +1.219]  >0: 10/20 (=0: 0)
+    Team benchmark for the channel, B - F under team objectives (homogeneous):
+      profit     n=20  mean +0.162  sd 2.655  se 0.594  95% CI [-1.081, +1.404]  >0: 11/20 (=0: 0)
+      margin     n=20  mean -0.134  sd 1.402  se 0.313  95% CI [-0.791, +0.522]  >0: 11/20 (=0: 0)
+      buyer      n=20  mean +0.035  sd 3.723  se 0.833  95% CI [-1.707, +1.778]  >0: 9/20 (=0: 1)
+      joint      n=20  mean +0.197  sd 4.158  se 0.930  95% CI [-1.749, +2.143]  >0: 10/20 (=0: 0)
+      mixed B:F gap, team (firm profit) n=20  mean +0.290  sd 1.941  se 0.434  95% CI [-0.618, +1.199]  >0: 10/20 (=0: 0)
+    Agency costs, conflict minus team (homogeneous):
+      F_conf - F_team        profit     n=20  mean +1.103  sd 2.822  se 0.631  95% CI [-0.217, +2.424]  >0: 16/20 (=0: 0)
+      F_conf - F_team        margin     n=20  mean +0.467  sd 2.020  se 0.452  95% CI [-0.478, +1.413]  >0: 12/20 (=0: 0)
+      F_conf - F_team        buyer      n=20  mean -5.012  sd 5.521  se 1.235  95% CI [-7.596, -2.428]  >0: 4/20 (=0: 0)
+      F_conf - F_team        joint      n=20  mean -3.909  sd 5.655  se 1.264  95% CI [-6.556, -1.263]  >0: 3/20 (=0: 0)
+      F_conf - F_team        below_cost n=20  mean +0.041  sd 0.068  se 0.015  95% CI [+0.009, +0.072]  >0: 8/20 (=0: 12)
+      F_conf - F_team        loss_win   n=20  mean +0.013  sd 0.056  se 0.012  95% CI [-0.014, +0.039]  >0: 1/20 (=0: 19)
+      B_conf - B_team        profit     n=20  mean +1.191  sd 4.563  se 1.020  95% CI [-0.944, +3.326]  >0: 11/20 (=0: 0)
+      B_conf - B_team        margin     n=20  mean +1.152  sd 3.121  se 0.698  95% CI [-0.308, +2.613]  >0: 14/20 (=0: 0)
+      B_conf - B_team        buyer      n=20  mean -2.411  sd 4.957  se 1.108  95% CI [-4.731, -0.091]  >0: 7/20 (=0: 0)
+      B_conf - B_team        joint      n=20  mean -1.220  sd 5.043  se 1.128  95% CI [-3.580, +1.140]  >0: 8/20 (=0: 0)
+      B_conf - B_team        below_cost n=20  mean +0.006  sd 0.019  se 0.004  95% CI [-0.003, +0.015]  >0: 2/20 (=0: 18)
+      B_conf - B_team        loss_win   n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+      Floor_conf - Floor_team profit     n=20  mean +1.397  sd 3.816  se 0.853  95% CI [-0.389, +3.183]  >0: 17/20 (=0: 0)
+      Floor_conf - Floor_team margin     n=20  mean +0.730  sd 1.861  se 0.416  95% CI [-0.141, +1.601]  >0: 16/20 (=0: 0)
+      Floor_conf - Floor_team buyer      n=20  mean -3.180  sd 5.592  se 1.250  95% CI [-5.797, -0.563]  >0: 4/20 (=0: 0)
+      Floor_conf - Floor_team joint      n=20  mean -1.783  sd 4.831  se 1.080  95% CI [-4.044, +0.478]  >0: 7/20 (=0: 0)
+      Floor_conf - Floor_team below_cost n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+      Floor_conf - Floor_team loss_win   n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    Surplus DiDs (as H2 and H4):
+      H2-type buyer   n=20  mean +2.602  sd 4.322  se 0.966  95% CI [+0.579, +4.624]  >0: 13/20 (=0: 0)
+      H4-type buyer   n=20  mean -0.770  sd 6.591  se 1.474  95% CI [-3.854, +2.315]  >0: 8/20 (=0: 0)
+      H2-type joint   n=20  mean +2.690  sd 6.696  se 1.497  95% CI [-0.444, +5.823]  >0: 14/20 (=0: 0)
+      H4-type joint   n=20  mean -0.564  sd 7.543  se 1.687  95% CI [-4.094, +2.966]  >0: 10/20 (=0: 0)
+      H2-type profit  n=20  mean +0.088  sd 5.429  se 1.214  95% CI [-2.453, +2.629]  >0: 10/20 (=0: 0)
+      H4-type profit  n=20  mean +0.206  sd 5.213  se 1.166  95% CI [-2.234, +2.646]  >0: 11/20 (=0: 0)
+    Mixed gaps by position (xa: X is supplier A; xb: X is supplier B):
+      brief_revenue:forward_revenue      xa n=20  mean +1.478  sd 6.994  se 1.564  95% CI [-1.795, +4.752]  >0: 11/20 (=0: 0)
+      brief_revenue:forward_revenue      xb n=20  mean +2.712  sd 5.578  se 1.247  95% CI [+0.102, +5.323]  >0: 11/20 (=0: 0)
+      brief:forward                      xa n=20  mean -1.186  sd 6.943  se 1.552  95% CI [-4.435, +2.064]  >0: 11/20 (=0: 0)
+      brief:forward                      xb n=20  mean +1.767  sd 7.235  se 1.618  95% CI [-1.619, +5.152]  >0: 11/20 (=0: 0)
+      floor_revenue:brief_revenue        xa n=20  mean -1.355  sd 6.965  se 1.557  95% CI [-4.614, +1.905]  >0: 8/20 (=0: 0)
+      floor_revenue:brief_revenue        xb n=20  mean +1.118  sd 7.429  se 1.661  95% CI [-2.359, +4.595]  >0: 10/20 (=0: 0)
+    Payoffs of choosing B against a rival's organization, per objective:
+      team      pi(B|F) - pi(F|F) n=20  mean +0.090  sd 1.229  se 0.275  95% CI [-0.486, +0.665]  >0: 11/20 (=0: 0)
+      team      pi(B|B) - pi(F|B) n=20  mean +0.282  sd 1.473  se 0.329  95% CI [-0.408, +0.971]  >0: 12/20 (=0: 1)
+      conflict  pi(B|F) - pi(F|F) n=20  mean +0.522  sd 1.934  se 0.432  95% CI [-0.383, +1.427]  >0: 13/20 (=0: 0)
+      conflict  pi(B|B) - pi(F|B) n=20  mean +1.698  sd 2.326  se 0.520  95% CI [+0.609, +2.787]  >0: 16/20 (=0: 0)
+    Tier 2 (exploratory), homogeneous:
+      Cap - B team   profit  n=20  mean -0.600  sd 2.729  se 0.610  95% CI [-1.878, +0.677]  >0: 9/20 (=0: 0)
+      Cap - B conf   profit  n=20  mean -0.328  sd 5.017  se 1.122  95% CI [-2.676, +2.020]  >0: 10/20 (=0: 0)
+      (Cap - B) DiD  profit  n=20  mean +0.273  sd 5.542  se 1.239  95% CI [-2.321, +2.866]  >0: 10/20 (=0: 0)
+      Cap - B team   margin  n=20  mean -0.049  sd 1.429  se 0.319  95% CI [-0.718, +0.619]  >0: 11/20 (=0: 0)
+      Cap - B conf   margin  n=20  mean -0.649  sd 3.569  se 0.798  95% CI [-2.319, +1.022]  >0: 12/20 (=0: 0)
+      (Cap - B) DiD  margin  n=20  mean -0.599  sd 3.829  se 0.856  95% CI [-2.391, +1.193]  >0: 9/20 (=0: 0)
+      Cap - B team   buyer   n=20  mean +0.931  sd 4.407  se 0.986  95% CI [-1.131, +2.994]  >0: 13/20 (=0: 0)
+      Cap - B conf   buyer   n=20  mean -0.661  sd 4.184  se 0.936  95% CI [-2.620, +1.297]  >0: 8/20 (=0: 0)
+      (Cap - B) DiD  buyer   n=20  mean -1.593  sd 3.850  se 0.861  95% CI [-3.395, +0.209]  >0: 9/20 (=0: 0)
+      Cap - B team   joint   n=20  mean +0.331  sd 4.543  se 1.016  95% CI [-1.795, +2.457]  >0: 10/20 (=0: 0)
+      Cap - B conf   joint   n=20  mean -0.989  sd 4.587  se 1.026  95% CI [-3.136, +1.157]  >0: 9/20 (=0: 0)
+      (Cap - B) DiD  joint   n=20  mean -1.320  sd 5.845  se 1.307  95% CI [-4.056, +1.415]  >0: 8/20 (=0: 0)
+      Cost - B team  profit  n=20  mean -0.048  sd 2.933  se 0.656  95% CI [-1.420, +1.325]  >0: 7/20 (=0: 0)
+      Cost - B conf  profit  n=20  mean -1.013  sd 4.607  se 1.030  95% CI [-3.169, +1.143]  >0: 8/20 (=0: 0)
+      (Cost - B) DiD profit  n=20  mean -0.965  sd 5.748  se 1.285  95% CI [-3.655, +1.725]  >0: 9/20 (=0: 0)
+      Cost - B team  margin  n=20  mean +0.237  sd 1.892  se 0.423  95% CI [-0.648, +1.122]  >0: 9/20 (=0: 0)
+      Cost - B conf  margin  n=20  mean -0.600  sd 3.058  se 0.684  95% CI [-2.031, +0.831]  >0: 7/20 (=0: 0)
+      (Cost - B) DiD margin  n=20  mean -0.837  sd 4.210  se 0.941  95% CI [-2.808, +1.133]  >0: 9/20 (=0: 0)
+      Cost - B team  buyer   n=20  mean +1.295  sd 4.674  se 1.045  95% CI [-0.893, +3.482]  >0: 12/20 (=0: 0)
+      Cost - B conf  buyer   n=20  mean +0.290  sd 5.542  se 1.239  95% CI [-2.303, +2.884]  >0: 11/20 (=0: 0)
+      (Cost - B) DiD buyer   n=20  mean -1.004  sd 7.729  se 1.728  95% CI [-4.622, +2.613]  >0: 7/20 (=0: 0)
+      Cost - B team  joint   n=20  mean +1.247  sd 5.116  se 1.144  95% CI [-1.148, +3.641]  >0: 15/20 (=0: 0)
+      Cost - B conf  joint   n=20  mean -0.722  sd 5.286  se 1.182  95% CI [-3.197, +1.752]  >0: 10/20 (=0: 0)
+      (Cost - B) DiD joint   n=20  mean -1.969  sd 8.065  se 1.803  95% CI [-5.744, +1.805]  >0: 4/20 (=0: 0)
+
+LEVELS by homogeneous cell, events 2-6 (mean over seeds of the institution-pooled value):
+  brief                profit 6.708  buyer 69.046  joint 75.754  margin 4.888  below_cost 0.000  loss_win 0.000  cut 1.704
+  brief_revenue        profit 8.265  buyer 66.534  joint 74.799  margin 6.100  below_cost 0.008  loss_win 0.000  cut 1.782
+  forward              profit 6.716  buyer 69.359  joint 76.075  margin 4.931  below_cost 0.000  loss_win 0.000  cut 2.690
+  forward_revenue      profit 8.044  buyer 63.868  joint 71.912  margin 5.563  below_cost 0.063  loss_win 0.020  cut 3.360
+  floor                profit 5.891  buyer 69.993  joint 75.884  margin 4.378  below_cost 0.000  loss_win 0.000  cut 0.800
+  floor_revenue        profit 7.349  buyer 66.842  joint 74.191  margin 5.099  below_cost 0.000  loss_win 0.000  cut 1.416
+  brief_cap            profit 6.276  buyer 70.231  joint 76.508  margin 4.809  below_cost 0.000  loss_win 0.000  cut 2.498
+  brief_cap_revenue    profit 7.924  buyer 65.846  joint 73.771  margin 5.434  below_cost 0.025  loss_win 0.025  cut 1.907
+  brief_cost           profit 6.910  buyer 70.313  joint 77.223  margin 5.143  below_cost 0.003  loss_win 0.000  cut 1.355
+  brief_cost_revenue   profit 6.995  buyer 66.886  joint 73.881  margin 5.445  below_cost 0.010  loss_win 0.005  cut 1.667
+
+MESSAGE CODING (analyst-written messages, events 2-6; per-seed means over institutions, suppliers and events; the mean over seeds is shown with the usual statistics).
+  brief
+    words        n=20  mean +591.390  sd 16.618  se 3.716  95% CI [+583.613, +599.167]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.977  sd 0.041  se 0.009  95% CI [+0.958, +0.997]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.745  sd 0.110  se 0.025  95% CI [+0.694, +0.796]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.956  sd 0.045  se 0.010  95% CI [+0.934, +0.977]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.625  sd 0.130  se 0.029  95% CI [+0.564, +0.686]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  brief_revenue
+    words        n=20  mean +543.420  sd 19.766  se 4.420  95% CI [+534.169, +552.671]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.980  sd 0.030  se 0.007  95% CI [+0.966, +0.994]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.747  sd 0.113  se 0.025  95% CI [+0.695, +0.800]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.938  sd 0.037  se 0.008  95% CI [+0.921, +0.956]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.542  sd 0.134  se 0.030  95% CI [+0.480, +0.605]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  floor
+    words        n=20  mean +456.047  sd 13.867  se 3.101  95% CI [+449.558, +462.537]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.992  sd 0.018  se 0.004  95% CI [+0.984, +1.001]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.730  sd 0.102  se 0.023  95% CI [+0.682, +0.778]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.933  sd 0.031  se 0.007  95% CI [+0.919, +0.948]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.608  sd 0.100  se 0.022  95% CI [+0.561, +0.654]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  floor_revenue
+    words        n=20  mean +435.997  sd 16.336  se 3.653  95% CI [+428.352, +443.643]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.982  sd 0.024  se 0.005  95% CI [+0.971, +0.994]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.787  sd 0.090  se 0.020  95% CI [+0.745, +0.830]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.907  sd 0.045  se 0.010  95% CI [+0.886, +0.928]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.655  sd 0.117  se 0.026  95% CI [+0.600, +0.710]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  brief_cap
+    words        n=20  mean +46.450  sd 0.651  se 0.146  95% CI [+46.145, +46.755]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.863  sd 0.078  se 0.017  95% CI [+0.826, +0.899]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.193  sd 0.082  se 0.018  95% CI [+0.154, +0.231]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.524  sd 0.088  se 0.020  95% CI [+0.482, +0.565]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.348  sd 0.101  se 0.023  95% CI [+0.300, +0.395]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  brief_cap_revenue
+    words        n=20  mean +46.067  sd 0.633  se 0.142  95% CI [+45.771, +46.364]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.883  sd 0.071  se 0.016  95% CI [+0.849, +0.916]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.300  sd 0.115  se 0.026  95% CI [+0.246, +0.354]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.552  sd 0.090  se 0.020  95% CI [+0.510, +0.594]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.365  sd 0.095  se 0.021  95% CI [+0.321, +0.409]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  brief_cost
+    words        n=20  mean +476.893  sd 15.772  se 3.527  95% CI [+469.511, +484.274]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.997  sd 0.011  se 0.003  95% CI [+0.992, +1.003]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.895  sd 0.078  se 0.017  95% CI [+0.859, +0.931]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.923  sd 0.042  se 0.009  95% CI [+0.904, +0.943]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.860  sd 0.108  se 0.024  95% CI [+0.809, +0.911]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.835  sd 0.089  se 0.020  95% CI [+0.793, +0.877]  >0: 20/20 (=0: 0)
+  brief_cost_revenue
+    words        n=20  mean +443.385  sd 13.702  se 3.064  95% CI [+436.972, +449.798]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +1.000  sd 0.000  se 0.000  95% CI [+1.000, +1.000]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.857  sd 0.080  se 0.018  95% CI [+0.820, +0.895]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.900  sd 0.049  se 0.011  95% CI [+0.878, +0.923]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.713  sd 0.127  se 0.028  95% CI [+0.653, +0.772]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.785  sd 0.092  se 0.021  95% CI [+0.742, +0.828]  >0: 20/20 (=0: 0)
+  brief_vs_forward_xa (the brief firm)
+    words        n=20  mean +585.100  sd 47.216  se 10.558  95% CI [+563.002, +607.198]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.955  sd 0.076  se 0.017  95% CI [+0.919, +0.991]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.720  sd 0.154  se 0.034  95% CI [+0.648, +0.792]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.940  sd 0.077  se 0.017  95% CI [+0.904, +0.976]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.615  sd 0.315  se 0.070  95% CI [+0.468, +0.762]  >0: 19/20 (=0: 1)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  brief_vs_forward_xb (the brief firm)
+    words        n=20  mean +586.905  sd 48.590  se 10.865  95% CI [+564.164, +609.646]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.975  sd 0.044  se 0.010  95% CI [+0.954, +0.996]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.705  sd 0.209  se 0.047  95% CI [+0.607, +0.803]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.930  sd 0.068  se 0.015  95% CI [+0.898, +0.962]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.630  sd 0.298  se 0.067  95% CI [+0.491, +0.769]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  brief_revenue_vs_forward_revenue_xa (the brief_revenue firm)
+    words        n=20  mean +538.125  sd 50.640  se 11.323  95% CI [+514.425, +561.825]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.970  sd 0.047  se 0.011  95% CI [+0.948, +0.992]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.670  sd 0.175  se 0.039  95% CI [+0.588, +0.752]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.926  sd 0.081  se 0.018  95% CI [+0.888, +0.964]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.535  sd 0.301  se 0.067  95% CI [+0.394, +0.676]  >0: 18/20 (=0: 2)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  brief_revenue_vs_forward_revenue_xb (the brief_revenue firm)
+    words        n=20  mean +531.985  sd 36.048  se 8.061  95% CI [+515.114, +548.856]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.985  sd 0.037  se 0.008  95% CI [+0.968, +1.002]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.795  sd 0.128  se 0.029  95% CI [+0.735, +0.855]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.941  sd 0.050  se 0.011  95% CI [+0.918, +0.964]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.670  sd 0.268  se 0.060  95% CI [+0.545, +0.795]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  floor_revenue_vs_brief_revenue_xa (the brief_revenue firm)
+    words        n=20  mean +540.605  sd 38.725  se 8.659  95% CI [+522.481, +558.729]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.975  sd 0.055  se 0.012  95% CI [+0.949, +1.001]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.760  sd 0.160  se 0.036  95% CI [+0.685, +0.835]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.929  sd 0.067  se 0.015  95% CI [+0.898, +0.961]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.605  sd 0.244  se 0.055  95% CI [+0.491, +0.719]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  floor_revenue_vs_brief_revenue_xa (the floor_revenue firm)
+    words        n=20  mean +435.175  sd 39.325  se 8.793  95% CI [+416.771, +453.579]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +1.000  sd 0.000  se 0.000  95% CI [+1.000, +1.000]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.730  sd 0.178  se 0.040  95% CI [+0.647, +0.813]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.919  sd 0.084  se 0.019  95% CI [+0.880, +0.959]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.605  sd 0.310  se 0.069  95% CI [+0.460, +0.750]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  floor_revenue_vs_brief_revenue_xb (the brief_revenue firm)
+    words        n=20  mean +537.725  sd 35.573  se 7.954  95% CI [+521.077, +554.373]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.970  sd 0.047  se 0.011  95% CI [+0.948, +0.992]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.765  sd 0.166  se 0.037  95% CI [+0.687, +0.843]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.938  sd 0.088  se 0.020  95% CI [+0.897, +0.980]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.655  sd 0.287  se 0.064  95% CI [+0.520, +0.790]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  floor_revenue_vs_brief_revenue_xb (the floor_revenue firm)
+    words        n=20  mean +445.895  sd 37.292  se 8.339  95% CI [+428.442, +463.348]  >0: 20/20 (=0: 0)
+    dollar       n=20  mean +0.985  sd 0.037  se 0.008  95% CI [+0.968, +1.002]  >0: 20/20 (=0: 0)
+    lower_bound  n=20  mean +0.715  sd 0.163  se 0.036  95% CI [+0.639, +0.791]  >0: 20/20 (=0: 0)
+    relayed      n=20  mean +0.878  sd 0.107  se 0.024  95% CI [+0.828, +0.929]  >0: 20/20 (=0: 0)
+    adherence    n=20  mean +0.580  sd 0.295  se 0.066  95% CI [+0.442, +0.718]  >0: 20/20 (=0: 0)
+    cost_quoted  n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+  Message length by event (mean words over seeds, institutions and suppliers):
+    brief                e2 627.0  e3 582.1  e4 592.7  e5 571.2  e6 583.9
+    brief_revenue        e2 554.0  e3 532.3  e4 535.5  e5 542.5  e6 552.8
+    floor                e2 455.6  e3 455.9  e4 465.3  e5 447.7  e6 455.8
+    floor_revenue        e2 443.8  e3 449.9  e4 440.1  e5 427.6  e6 418.6
+    brief_cap            e2 47.2  e3 46.5  e4 46.7  e5 45.6  e6 46.2
+    brief_cap_revenue    e2 47.1  e3 46.5  e4 46.5  e5 44.9  e6 45.5
+    brief_cost           e2 504.7  e3 480.2  e4 474.6  e5 460.3  e6 464.7
+    brief_cost_revenue   e2 474.3  e3 447.1  e4 435.9  e5 430.6  e6 429.1
+
+FLOOR USE (floor organizations, events 2-6).
+  floor
+    set_pos         n=20  mean +0.748  sd 0.095  se 0.021  95% CI [+0.703, +0.792]  >0: 20/20 (=0: 0)
+    set_zero        n=20  mean +0.117  sd 0.071  se 0.016  95% CI [+0.084, +0.151]  >0: 18/20 (=0: 2)
+    none            n=20  mean +0.135  sd 0.078  se 0.017  95% CI [+0.099, +0.171]  >0: 18/20 (=0: 2)
+    malformed       n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    x               n=20  mean +2.768  sd 1.153  se 0.258  95% CI [+2.228, +3.308]  >0: 20/20 (=0: 0)
+    analyst_reasked n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    returned        n=20  mean +0.001  sd 0.004  se 0.001  95% CI [-0.001, +0.003]  >0: 1/20 (=0: 19)
+    raised          n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    first_gap       n=20  mean +2.835  sd 1.178  se 0.263  95% CI [+2.283, +3.386]  >0: 20/20 (=0: 0)
+  floor_revenue
+    set_pos         n=20  mean +0.890  sd 0.055  se 0.012  95% CI [+0.864, +0.916]  >0: 20/20 (=0: 0)
+    set_zero        n=20  mean +0.045  sd 0.039  se 0.009  95% CI [+0.027, +0.063]  >0: 14/20 (=0: 6)
+    none            n=20  mean +0.065  sd 0.043  se 0.010  95% CI [+0.045, +0.085]  >0: 16/20 (=0: 4)
+    malformed       n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    x               n=20  mean +3.571  sd 1.248  se 0.279  95% CI [+2.987, +4.155]  >0: 20/20 (=0: 0)
+    analyst_reasked n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    returned        n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    raised          n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    first_gap       n=20  mean +2.968  sd 1.001  se 0.224  95% CI [+2.499, +3.436]  >0: 20/20 (=0: 0)
+  floor_revenue_vs_brief_revenue_xa
+    set_pos         n=20  mean +0.855  sd 0.143  se 0.032  95% CI [+0.788, +0.922]  >0: 20/20 (=0: 0)
+    set_zero        n=20  mean +0.040  sd 0.068  se 0.015  95% CI [+0.008, +0.072]  >0: 6/20 (=0: 14)
+    none            n=20  mean +0.105  sd 0.115  se 0.026  95% CI [+0.051, +0.159]  >0: 12/20 (=0: 8)
+    malformed       n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    x               n=20  mean +3.027  sd 1.420  se 0.318  95% CI [+2.362, +3.691]  >0: 20/20 (=0: 0)
+    analyst_reasked n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    returned        n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    raised          n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    first_gap       n=20  mean +2.478  sd 1.377  se 0.308  95% CI [+1.834, +3.123]  >0: 20/20 (=0: 0)
+  floor_revenue_vs_brief_revenue_xb
+    set_pos         n=20  mean +0.855  sd 0.128  se 0.029  95% CI [+0.795, +0.915]  >0: 20/20 (=0: 0)
+    set_zero        n=20  mean +0.065  sd 0.088  se 0.020  95% CI [+0.024, +0.106]  >0: 9/20 (=0: 11)
+    none            n=20  mean +0.080  sd 0.106  se 0.024  95% CI [+0.031, +0.129]  >0: 10/20 (=0: 10)
+    malformed       n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    x               n=20  mean +3.673  sd 2.040  se 0.456  95% CI [+2.718, +4.627]  >0: 20/20 (=0: 0)
+    analyst_reasked n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    returned        n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    raised          n=20  mean +0.000  sd 0.000  se 0.000  95% CI [+0.000, +0.000]  >0: 0/20 (=0: 20)
+    first_gap       n=20  mean +3.822  sd 2.591  se 0.579  95% CI [+2.610, +5.035]  >0: 20/20 (=0: 0)
+  minimum profit when set, homogeneous floor cells pooled: n 720, mean 3.200, median 2.000
+
+CAP (brief_cap cells, events 2-6).
+  brief_cap            reasked         n=20  mean +0.353  sd 0.102  se 0.023  95% CI [+0.305, +0.400]  >0: 20/20 (=0: 0)
+  brief_cap            cut             n=20  mean +0.040  sd 0.045  se 0.010  95% CI [+0.019, +0.061]  >0: 11/20 (=0: 9)
+  brief_cap            original_words  n=20  mean +49.763  sd 0.871  se 0.195  95% CI [+49.355, +50.170]  >0: 20/20 (=0: 0)
+  brief_cap            final_words     n=20  mean +46.450  sd 0.651  se 0.146  95% CI [+46.145, +46.755]  >0: 20/20 (=0: 0)
+  brief_cap_revenue    reasked         n=20  mean +0.265  sd 0.108  se 0.024  95% CI [+0.215, +0.315]  >0: 20/20 (=0: 0)
+  brief_cap_revenue    cut             n=20  mean +0.015  sd 0.029  se 0.006  95% CI [+0.002, +0.028]  >0: 5/20 (=0: 15)
+  brief_cap_revenue    original_words  n=20  mean +48.553  sd 1.187  se 0.265  95% CI [+47.997, +49.108]  >0: 20/20 (=0: 0)
+  brief_cap_revenue    final_words     n=20  mean +46.067  sd 0.633  se 0.142  95% CI [+45.771, +46.364]  >0: 20/20 (=0: 0)
+
+DO THE ANALYSTS PUSH FOR MARGIN? (plan: (a) or (b); a 95% interval wholly above 0 counts)
+  (a) positive floor share, Floor_conf - Floor_team    n=20  mean +0.142  sd 0.092  se 0.021  95% CI [+0.099, +0.186]  >0: 19/20 (=0: 0)  PUSH
+  (b) lower-bound language share, B_conf - B_team      n=20  mean +0.003  sd 0.137  se 0.031  95% CI [-0.062, +0.067]  >0: 10/20 (=0: 3)  no

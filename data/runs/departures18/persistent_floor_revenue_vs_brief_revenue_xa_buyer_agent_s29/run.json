@@ -1,0 +1,148 @@
+{
+  "status": "complete",
+  "error": null,
+  "started_at": "2026-10-17T14:47:31+00:00",
+  "finished_at": "2026-10-17T14:54:07+00:00",
+  "usage": {
+    "requests": 70,
+    "failed_requests": 0,
+    "prompt_tokens": 148847,
+    "completion_tokens": 69275,
+    "largest_completion_tokens": 3245,
+    "truncated": 0,
+    "no_usage": 0,
+    "finish_reasons": {
+      "stop": 70
+    },
+    "http_attempts": 70,
+    "http_responses": {
+      "200": 70
+    },
+    "by_agent": {
+      "analyst_brief_revenue": {
+        "requests": 5,
+        "failed_requests": 0,
+        "prompt_tokens": 10588,
+        "completion_tokens": 14251,
+        "largest_completion_tokens": 3092,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 5
+        }
+      },
+      "analyst_floor_revenue": {
+        "requests": 5,
+        "failed_requests": 0,
+        "prompt_tokens": 11859,
+        "completion_tokens": 13557,
+        "largest_completion_tokens": 3245,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 5
+        }
+      },
+      "bidder_brief_revenue": {
+        "requests": 18,
+        "failed_requests": 0,
+        "prompt_tokens": 48379,
+        "completion_tokens": 14658,
+        "largest_completion_tokens": 1687,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 18
+        }
+      },
+      "bidder_floor_revenue": {
+        "requests": 18,
+        "failed_requests": 0,
+        "prompt_tokens": 47733,
+        "completion_tokens": 11589,
+        "largest_completion_tokens": 1059,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 18
+        }
+      },
+      "buyer_agent": {
+        "requests": 24,
+        "failed_requests": 0,
+        "prompt_tokens": 30288,
+        "completion_tokens": 15220,
+        "largest_completion_tokens": 740,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 24
+        }
+      }
+    }
+  },
+  "argv": [
+    "--backend",
+    "openai",
+    "--hosted",
+    "--default-sampling",
+    "--no-tools",
+    "--base-url",
+    "https://api.anthropic.com/v1/",
+    "--model",
+    "claude-haiku-5-5",
+    "--max-tokens",
+    "16000",
+    "--max-retries",
+    "30",
+    "--timeout",
+    "300",
+    "--prompts",
+    "primitives",
+    "--events",
+    "6",
+    "--rounds",
+    "3",
+    "--environment",
+    "persistent",
+    "--institutions",
+    "buyer_agent",
+    "--mixed",
+    "floor_revenue:brief_revenue",
+    "--seeds",
+    "29",
+    "--out",
+    "outputs/departures18/persistent_floor_revenue_vs_brief_revenue_xa_buyer_agent_s29"
+  ],
+  "backend": "openai",
+  "model": "claude-haiku-5-5",
+  "base_url": "https://api.anthropic.com/v1/",
+  "hosted": true,
+  "default_sampling": true,
+  "max_tokens": 16000,
+  "max_retries": 30,
+  "timeout": 300,
+  "no_tools": true,
+  "institutions": [
+    "buyer_agent"
+  ],
+  "organizations": null,
+  "mixed": [
+    "floor_revenue:brief_revenue"
+  ],
+  "prompts": "primitives",
+  "environment": "persistent",
+  "events": 6,
+  "rounds": 3,
+  "max_history_events": 0,
+  "seeds": [
+    29
+  ],
+  "debug_log": null,
+  "git_commit": "653e656f335d0889220a2b058a87e8399fd87b6b",
+  "git_dirty": false,
+  "source_sha256": "b4d072575b9f994252c5150a7976d2a10804e01eee6c5fdc5f2f770874d7d704",
+  "python": "3.14.3",
+  "numpy": "2.4.2",
+  "openai": "2.26.0"
+}

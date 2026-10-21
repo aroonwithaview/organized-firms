@@ -1,0 +1,37 @@
+POST HOC panel re-analysis (estimates only; no tests). Mixed cells; seeds pooled over positions, then institutions.
+
+=== seeds 23-42: runs 640; problems 0 ===
+  A event-1 market margin: conflict level 4.8687  team level 5.8956
+    conflict - team: n=20  mean -1.0268  sd 1.8217  se 0.4073  95% CI [-1.8794, -0.1743]  >0: 8  <0: 12  =0: 0
+  B below-cost share of own final bids, F firm: conflict 0.0875  team 0.0075
+    conflict - team: n=20  mean +0.0800  sd 0.0657  se 0.0147  95% CI [+0.0493, +0.1107]  >0: 14  <0: 0  =0: 6
+  B below-cost share of own final bids, B firm: conflict 0.0100  team 0.0000
+    conflict - team: n=20  mean +0.0100  sd 0.0348  se 0.0078  95% CI [-0.0063, +0.0263]  >0: 2  <0: 0  =0: 18
+  C F firm's final-bid cost: conflict 121.2966  team 115.3230
+    conflict - team: n=20  mean +5.9736  sd 4.9785  se 1.1132  95% CI [+3.6436, +8.3036]  >0: 19  <0: 1  =0: 0
+  C F firm's final-bid price: conflict 126.5360  team 120.2339
+    conflict - team: n=20  mean +6.3021  sd 4.9519  se 1.1073  95% CI [+3.9846, +8.6196]  >0: 19  <0: 1  =0: 0
+  D conflict: B round-1 price equals a figure in its own briefing 0.5975 against the next seed's briefing 0.0675 (bids 400)
+    own - placebo, per seed: n=20  mean +0.5300  sd 0.1292  se 0.0289  95% CI [+0.4695, +0.5905]  >0: 20  <0: 0  =0: 0
+  D team: B round-1 price equals a figure in its own briefing 0.6200 against the next seed's briefing 0.0825 (bids 400)
+    own - placebo, per seed: n=20  mean +0.5375  sd 0.1413  se 0.0316  95% CI [+0.4714, +0.6036]  >0: 20  <0: 0  =0: 0
+  E conflict: win share B - F n=20  mean +0.2300  sd 0.2029  se 0.0454  95% CI [+0.1351, +0.3249]  >0: 15  <0: 2  =0: 3
+  E team: win share B - F n=20  mean +0.0650  sd 0.2889  se 0.0646  95% CI [-0.0702, +0.2002]  >0: 7  <0: 7  =0: 6
+
+=== seeds 43-62: runs 160; problems 0 ===
+  A event-1 market margin: conflict level 5.4257  team level 5.7200
+    conflict - team: n=20  mean -0.2943  sd 1.7298  se 0.3868  95% CI [-1.1038, +0.5153]  >0: 7  <0: 13  =0: 0
+  B below-cost share of own final bids, F firm: conflict 0.1400  team 0.0125
+    conflict - team: n=20  mean +0.1275  sd 0.1292  se 0.0289  95% CI [+0.0670, +0.1880]  >0: 16  <0: 1  =0: 3
+  B below-cost share of own final bids, B firm: conflict 0.0050  team 0.0000
+    conflict - team: n=20  mean +0.0050  sd 0.0154  se 0.0034  95% CI [-0.0022, +0.0122]  >0: 2  <0: 0  =0: 18
+  C F firm's final-bid cost: conflict 121.3434  team 113.8288
+    conflict - team: n=20  mean +7.5146  sd 4.6842  se 1.0474  95% CI [+5.3223, +9.7068]  >0: 19  <0: 1  =0: 0
+  C F firm's final-bid price: conflict 125.8170  team 119.2685
+    conflict - team: n=20  mean +6.5485  sd 4.9008  se 1.0959  95% CI [+4.2549, +8.8421]  >0: 20  <0: 0  =0: 0
+  D conflict: B round-1 price equals a figure in its own briefing 0.5700 against the next seed's briefing 0.0925 (bids 400)
+    own - placebo, per seed: n=20  mean +0.4775  sd 0.1860  se 0.0416  95% CI [+0.3904, +0.5646]  >0: 20  <0: 0  =0: 0
+  D team: B round-1 price equals a figure in its own briefing 0.5500 against the next seed's briefing 0.0925 (bids 400)
+    own - placebo, per seed: n=20  mean +0.4575  sd 0.1719  se 0.0384  95% CI [+0.3771, +0.5379]  >0: 20  <0: 0  =0: 0
+  E conflict: win share B - F n=20  mean +0.1150  sd 0.2346  se 0.0525  95% CI [+0.0052, +0.2248]  >0: 10  <0: 3  =0: 7
+  E team: win share B - F n=20  mean +0.0350  sd 0.2033  se 0.0455  95% CI [-0.0602, +0.1302]  >0: 7  <0: 7  =0: 6

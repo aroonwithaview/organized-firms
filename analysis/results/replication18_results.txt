@@ -1,0 +1,30 @@
+H1 replication, seeds 43-62. Conflict root data/runs/replication18; team root data/runs/replication18_team
+  conflict: runs 80; problems 0; (commit, dirty, source) [('653e656f335d0889220a2b058a87e8399fd87b6b', False, 'b4d072575b9f994252c5150a7976d2a10804e01eee6c5fdc5f2f770874d7d704')]
+    cells 4; missing seeds: none
+  team: runs 80; problems 0; (commit, dirty, source) [('653e656f335d0889220a2b058a87e8399fd87b6b', False, 'b4d072575b9f994252c5150a7976d2a10804e01eee6c5fdc5f2f770874d7d704')]
+    cells 4; missing seeds: none
+
+R1 (pre-registered): H1 on seeds 43-62, events 2-6, institutions pooled; exact two-sided sign-flip, alpha 0.05.
+  n=20  mean +0.848  sd 2.503  se 0.560  95% CI [-0.323, +2.020]  >0: 13/20 (=0: 0)  p 0.153753  not confirmed
+      per seed: s43 +2.17, s44 +0.02, s45 +0.81, s46 +0.23, s47 -0.42, s48 +7.86, s49 +1.15, s50 +1.73, s51 +2.88, s52 +0.62, s53 -2.24, s54 -1.11, s55 -2.15, s56 +0.55, s57 +0.90, s58 -0.43, s59 -1.70, s60 -1.35, s61 +1.64, s62 +5.79
+
+R2 (pre-registered): per seed, the conflict gap minus the team gap; exact two-sided sign-flip, alpha 0.05.
+  n=20  mean +0.606  sd 3.070  se 0.686  95% CI [-0.831, +2.043]  >0: 11/20 (=0: 0)  p 0.407381  not rejected
+      per seed: s43 +1.80, s44 +2.60, s45 +0.36, s46 +0.66, s47 -1.00, s48 +9.35, s49 +2.33, s50 +2.11, s51 +3.55, s52 -1.52, s53 -4.61, s54 +1.17, s55 -3.20, s56 -0.46, s57 +1.41, s58 -1.55, s59 -1.26, s60 -1.90, s61 -1.80, s62 +4.08
+  team gap alone (estimate): n=20  mean +0.242  sd 1.537  se 0.344  95% CI [-0.477, +0.962]  >0: 11/20 (=0: 0)
+
+SECONDARY (estimates only).
+  H1 at event 1 (placebo)                  n=20  mean +1.616  sd 3.416  se 0.764  95% CI [+0.018, +3.215]  >0: 14/20 (=0: 0)
+  H1 minus its event-1 value               n=20  mean -0.768  sd 3.234  se 0.723  95% CI [-2.282, +0.746]  >0: 6/20 (=0: 0)
+  H1, mediator     alone                 n=20  mean +0.779  sd 4.532  se 1.013  95% CI [-1.342, +2.900]  >0: 10/20 (=0: 0)
+  H1, buyer_agent  alone                 n=20  mean +0.918  sd 1.448  se 0.324  95% CI [+0.240, +1.595]  >0: 14/20 (=0: 0)
+  H1, position xa alone                 n=20  mean +2.201  sd 7.912  se 1.769  95% CI [-1.502, +5.903]  >0: 11/20 (=0: 0)
+  H1, position xb alone                 n=20  mean -0.504  sd 6.201  se 1.386  95% CI [-3.406, +2.398]  >0: 9/20 (=0: 0)
+  H1 with tied events split                n=20  mean +0.800  sd 2.375  se 0.531  95% CI [-0.311, +1.912]  >0: 13/20 (=0: 0)
+  [event 1] B win 0.5125  F win 0.4875  B below cost 0.0375  F below cost 0.0500
+  [event 1] win share B - F         n=20  mean +0.025  sd 0.413  se 0.092  95% CI [-0.168, +0.218]  >0: 4/20 (=0: 13)
+  [event 1] below-cost share B - F  n=20  mean -0.013  sd 0.151  se 0.034  95% CI [-0.083, +0.058]  >0: 3/20 (=0: 13)
+  [events 2-6] B win 0.5575  F win 0.4425  B below cost 0.0050  F below cost 0.1400
+  [events 2-6] win share B - F         n=20  mean +0.115  sd 0.235  se 0.052  95% CI [+0.005, +0.225]  >0: 10/20 (=0: 7)
+  [events 2-6] below-cost share B - F  n=20  mean -0.135  sd 0.117  se 0.026  95% CI [-0.190, -0.080]  >0: 0/20 (=0: 3)
+  H1 pooled over seeds 23-62 (estimate, not a test): n=40  mean +1.498  se 0.441  (approximate 95% interval with t(39) = 2.023: +0.605 to +2.391)

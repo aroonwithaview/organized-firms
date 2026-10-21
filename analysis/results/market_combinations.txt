@@ -1,0 +1,21 @@
+1. Combinations (contract, type of A, type of B) under the draw's rules: 8; probabilities sum to 1
+   Quality Priority  A quality  B speed    probability 3/16
+   Quality Priority  A speed    B quality  probability 3/16
+   Speed Priority    A quality  B speed    probability 3/16
+   Speed Priority    A speed    B quality  probability 3/16
+   Quality Priority  A quality  B quality  probability 1/16
+   Quality Priority  A speed    B speed    probability 1/16
+   Speed Priority    A quality  B quality  probability 1/16
+   Speed Priority    A speed    B speed    probability 1/16
+   probability by value: 3/16 x 4, 1/16 x 4
+
+2. Combinations drawn for seeds 3 to 62 (the seeds of the recorded runs): 8 distinct, 60 seeds
+   Combinations drawn for seeds 0 to 9999: 8 distinct; all among the 8 above: True
+   Quality Priority  A quality  B speed    drawn 0.1854  probability 0.1875
+   Quality Priority  A speed    B quality  drawn 0.1890  probability 0.1875
+   Speed Priority    A quality  B speed    drawn 0.1902  probability 0.1875
+   Speed Priority    A speed    B quality  drawn 0.1859  probability 0.1875
+   Quality Priority  A quality  B quality  drawn 0.0608  probability 0.0625
+   Quality Priority  A speed    B speed    drawn 0.0643  probability 0.0625
+   Speed Priority    A quality  B quality  drawn 0.0610  probability 0.0625
+   Speed Priority    A speed    B speed    drawn 0.0634  probability 0.0625

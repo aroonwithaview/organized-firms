@@ -1,0 +1,136 @@
+{
+  "status": "complete",
+  "error": null,
+  "started_at": "2026-10-17T19:54:21+00:00",
+  "finished_at": "2026-10-17T20:00:11+00:00",
+  "usage": {
+    "requests": 65,
+    "failed_requests": 0,
+    "prompt_tokens": 138874,
+    "completion_tokens": 60793,
+    "largest_completion_tokens": 2899,
+    "truncated": 0,
+    "no_usage": 0,
+    "finish_reasons": {
+      "stop": 65
+    },
+    "http_attempts": 65,
+    "http_responses": {
+      "200": 65
+    },
+    "by_agent": {
+      "analyst_brief_revenue": {
+        "requests": 5,
+        "failed_requests": 0,
+        "prompt_tokens": 10633,
+        "completion_tokens": 13128,
+        "largest_completion_tokens": 2899,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 5
+        }
+      },
+      "bidder_brief_revenue": {
+        "requests": 18,
+        "failed_requests": 0,
+        "prompt_tokens": 47260,
+        "completion_tokens": 15243,
+        "largest_completion_tokens": 1736,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 18
+        }
+      },
+      "bidder_forward_revenue": {
+        "requests": 18,
+        "failed_requests": 0,
+        "prompt_tokens": 50693,
+        "completion_tokens": 16935,
+        "largest_completion_tokens": 1354,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 18
+        }
+      },
+      "buyer_agent": {
+        "requests": 24,
+        "failed_requests": 0,
+        "prompt_tokens": 30288,
+        "completion_tokens": 15487,
+        "largest_completion_tokens": 865,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 24
+        }
+      }
+    }
+  },
+  "argv": [
+    "--backend",
+    "openai",
+    "--hosted",
+    "--default-sampling",
+    "--no-tools",
+    "--base-url",
+    "https://api.anthropic.com/v1/",
+    "--model",
+    "claude-haiku-5-5",
+    "--max-tokens",
+    "16000",
+    "--max-retries",
+    "30",
+    "--timeout",
+    "300",
+    "--prompts",
+    "primitives",
+    "--events",
+    "6",
+    "--rounds",
+    "3",
+    "--environment",
+    "persistent",
+    "--institutions",
+    "buyer_agent",
+    "--mixed",
+    "forward_revenue:brief_revenue",
+    "--seeds",
+    "58",
+    "--out",
+    "outputs/replication18/persistent_brief_revenue_vs_forward_revenue_xb_buyer_agent_s58"
+  ],
+  "backend": "openai",
+  "model": "claude-haiku-5-5",
+  "base_url": "https://api.anthropic.com/v1/",
+  "hosted": true,
+  "default_sampling": true,
+  "max_tokens": 16000,
+  "max_retries": 30,
+  "timeout": 300,
+  "no_tools": true,
+  "institutions": [
+    "buyer_agent"
+  ],
+  "organizations": null,
+  "mixed": [
+    "forward_revenue:brief_revenue"
+  ],
+  "prompts": "primitives",
+  "environment": "persistent",
+  "events": 6,
+  "rounds": 3,
+  "max_history_events": 0,
+  "seeds": [
+    58
+  ],
+  "debug_log": null,
+  "git_commit": "653e656f335d0889220a2b058a87e8399fd87b6b",
+  "git_dirty": false,
+  "source_sha256": "b4d072575b9f994252c5150a7976d2a10804e01eee6c5fdc5f2f770874d7d704",
+  "python": "3.14.3",
+  "numpy": "2.4.2",
+  "openai": "2.26.0"
+}

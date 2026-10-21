@@ -1,0 +1,4 @@
+Homogeneous floor and floor_revenue cells: 80 runs, events 2-6; problems 0
+  bids under a positive floor: 1965; at the floor (within half a cent): 291 (14.81%)
+  final-round bids under a positive floor: 655; at the floor: 146 (22.29%)
+  bids under any set floor ($0 included): 2160; returned 1; raised 0

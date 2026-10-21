@@ -1,0 +1,52 @@
+=== H1 attacks ===
+H1 (reproduced): mean +2.147350  sd 2.973689  se 0.664937  >0 15/20  (<0 5, =0 0; raw-float >0 15)  95% CI [+0.7556, +3.5391]  p 0.004633
+H1 mediator xa: mean +2.351000  sd 12.567568  se 2.810194  >0 11/20  (<0 9, =0 0; raw-float >0 11)  95% CI [-3.5308, +8.2328]  p 0.409412
+H1 mediator xb: mean +4.858500  sd 10.276810  se 2.297965  >0 14/20  (<0 6, =0 0; raw-float >0 14)  95% CI [+0.0488, +9.6682]  p 0.048914
+H1 buyer_agent xa: mean +0.319400  sd 3.214369  se 0.718755  >0 12/20  (<0 8, =0 0; raw-float >0 12)  95% CI [-1.1850, +1.8238]  p 0.662327
+H1 buyer_agent xb: mean +1.060500  sd 3.563145  se 0.796744  >0 14/20  (<0 6, =0 0; raw-float >0 14)  95% CI [-0.6071, +2.7281]  p 0.198580
+H1 event 1 alone: mean -0.692150  sd 3.155406  se 0.705570  >0 8/20  (<0 12, =0 0; raw-float >0 8)  95% CI [-2.1689, +0.7846]
+H1 event 2 alone: mean +1.633163  sd 3.325893  se 0.743692  >0 13/20  (<0 7, =0 0; raw-float >0 13)  95% CI [+0.0766, +3.1897]
+H1 event 3 alone: mean +2.462538  sd 3.592138  se 0.803226  >0 13/20  (<0 7, =0 0; raw-float >0 13)  95% CI [+0.7814, +4.1437]
+H1 event 4 alone: mean +1.912850  sd 3.484751  se 0.779214  >0 14/20  (<0 6, =0 0; raw-float >0 14)  95% CI [+0.2819, +3.5438]
+H1 event 5 alone: mean +2.372225  sd 3.589026  se 0.802531  >0 14/20  (<0 6, =0 0; raw-float >0 14)  95% CI [+0.6925, +4.0519]
+H1 event 6 alone: mean +2.355975  sd 3.807944  se 0.851482  >0 13/20  (<0 7, =0 0; raw-float >0 13)  95% CI [+0.5738, +4.1381]
+H1 on same-type seeds (n=6): mean +1.8271, >0 4/6
+H1 on different-type seeds (n=14): mean +2.2846, >0 11/14
+H1 leave-one-seed-out: mean range [1.8377, 2.3992]; p range [0.00175, 0.00927]; largest p when dropping seed 28
+H1 without the 1 largest seeds [28]: mean +1.8377, p 0.00927 (n=19)
+H1 without the 2 largest seeds [28, 39]: mean +1.6157, p 0.01834 (n=18)
+H1 without the 3 largest seeds [28, 39, 23]: mean +1.3869, p 0.03613 (n=17)
+H1 per-seed values: {23: np.float64(5.505), 24: np.float64(-1.665), 25: np.float64(-0.875), 26: np.float64(-2.03), 27: np.float64(1.225), 28: np.float64(8.03), 29: np.float64(4.685), 30: np.float64(3.188), 31: np.float64(0.402), 32: np.float64(-0.217), 33: np.float64(0.89), 34: np.float64(2.145), 35: np.float64(2.15), 36: np.float64(3.86), 37: np.float64(5.15), 38: np.float64(5.345), 39: np.float64(5.835), 40: np.float64(0.263), 41: np.float64(-2.638), 42: np.float64(1.7)}
+H1 minus its event-1 value (per seed): mean +2.839500  sd 3.347220  se 0.748461  >0 16/20  (<0 4, =0 0; raw-float >0 16)  95% CI [+1.2730, +4.4060]  p 0.000559
+conflict mixed cell, 480 events: events with a supplier lacking 3 bids 0; walk-aways 0; exact score ties 17; recorded winner = highest score in every event (checked)
+
+=== H2 null against the D8 surplus DiD ===
+margin, mean of both suppliers (H2's outcome): levels B 4.888, F 4.931, B_conf 6.100, F_conf 5.563 | F_conf-F_team +0.632 | B_conf-B_team +1.212 | DiD +0.580 (se 0.837, >0 12/20)
+winner's margin %: levels B 6.349, F 6.520, B_conf 7.551, F_conf 7.495 | F_conf-F_team +0.975 | B_conf-B_team +1.202 | DiD +0.227 (se 1.236, >0 10/20)
+loser's margin %: levels B 3.427, F 3.342, B_conf 4.649, F_conf 3.631 | F_conf-F_team +0.289 | B_conf-B_team +1.222 | DiD +0.933 (se 0.909, >0 11/20)
+winner's price: levels B 117.480, F 116.230, B_conf 122.734, F_conf 123.991 | F_conf-F_team +7.761 | B_conf-B_team +5.254 | DiD -2.507 (se 1.414, >0 7/20)
+winner's cost: levels B 110.772, F 109.514, B_conf 114.469, F_conf 115.947 | F_conf-F_team +6.433 | B_conf-B_team +3.698 | DiD -2.735 (se 1.931, >0 8/20)
+buyer value at winner's terms: levels B 186.526, F 185.589, B_conf 189.268, F_conf 187.859 | F_conf-F_team +2.270 | B_conf-B_team +2.742 | DiD +0.472 (se 1.226, >0 10/20)
+market profit: levels B 6.708, F 6.716, B_conf 8.265, F_conf 8.044 | F_conf-F_team +1.328 | B_conf-B_team +1.556 | DiD +0.228 (se 1.179, >0 10/20)
+buyer surplus: levels B 69.046, F 69.359, B_conf 66.534, F_conf 63.868 | F_conf-F_team -5.491 | B_conf-B_team -2.512 | DiD +2.979 (se 0.930, >0 13/20)
+joint surplus J: levels B 75.754, F 76.075, B_conf 74.799, F_conf 71.912 | F_conf-F_team -4.163 | B_conf-B_team -0.955 | DiD +3.208 (se 1.394, >0 16/20)
+allocation loss E - B_w: levels B 1.072, F 0.830, B_conf 0.665, F_conf 1.530 | F_conf-F_team +0.700 | B_conf-B_team -0.407 | DiD -1.107 (se 0.844, >0 4/20)
+configuration loss B_w - J: levels B 7.509, F 7.429, B_conf 8.871, F_conf 10.892 | F_conf-F_team +3.463 | B_conf-B_team +1.362 | DiD -2.101 (se 1.424, >0 6/20)
+correct-winner share: levels B 0.750, F 0.805, B_conf 0.805, F_conf 0.760 | F_conf-F_team -0.045 | B_conf-B_team +0.055 | DiD +0.100 (se 0.070, >0 11/20)
+winner's delivery weeks: levels B 4.295, F 4.460, B_conf 3.702, F_conf 3.795 | F_conf-F_team -0.665 | B_conf-B_team -0.593 | DiD +0.072 (se 0.245, >0 9/20)
+winner's quality tier: levels B 3.920, F 3.610, B_conf 3.830, F_conf 3.740 | F_conf-F_team +0.130 | B_conf-B_team -0.090 | DiD -0.220 (se 0.162, >0 6/20)
+H2 mediator alone: mean -0.143070  sd 5.282570  se 1.181219  >0 11/20  (<0 9, =0 0; raw-float >0 11)  95% CI [-2.6154, +2.3292]  p 0.904118
+H4 mediator alone: mean -0.316339  sd 5.247148  se 1.173298  >0 10/20  (<0 10, =0 0; raw-float >0 10)  95% CI [-2.7721, +2.1394]  p 0.788628
+H3 mediator alone: mean -0.157750  sd 3.266776  se 0.730473  >0 12/20  (<0 8, =0 0; raw-float >0 12)  95% CI [-1.6866, +1.3711]  p 0.831572
+H2 buyer_agent alone: mean +1.302800  sd 4.835268  se 1.081199  >0 9/20  (<0 11, =0 0; raw-float >0 9)  95% CI [-0.9602, +3.5658]  p 0.294600
+H4 buyer_agent alone: mean -0.666288  sd 4.233516  se 0.946643  >0 11/20  (<0 9, =0 0; raw-float >0 11)  95% CI [-2.6476, +1.3151]  p 0.591747
+H3 buyer_agent alone: mean +0.033250  sd 2.459798  se 0.550028  >0 11/20  (<0 9, =0 0; raw-float >0 11)  95% CI [-1.1180, +1.1845]  p 0.952730
+D8 buyer-surplus DiD mediator alone: mean +2.933425  sd 5.898906  se 1.319035  >0 12/20  (<0 8, =0 0; raw-float >0 12)  95% CI [+0.1727, +5.6942]
+D8 buyer-surplus DiD buyer_agent alone: mean +3.025375  sd 9.306839  se 2.081073  >0 10/20  (<0 10, =0 0; raw-float >0 10)  95% CI [-1.3304, +7.3811]
+
+=== Does the floor bind? (all floor cells, homogeneous and mixed) ===
+{'audited bids': 3249, 'returned': 1, 'raised': 0, 'bids under a positive floor': 2991, 'final bids under a positive floor': 997, 'within $1 above cost + minimum, positive floor': 1320, 'final bids within $1 above cost + minimum, positive floor': 558, 'priced exactly at cost + minimum (to the cent), positive floor': 413}
+slack = price - cost - minimum over audited bids: median 1.30, 10th pct 0.00, share < $1 0.4189, share < $2 0.5673
+
+=== frozen confirm17_concession runs (C1, C2 data) ===
+{'runs': 60, 'complete': 60, 'sha 46258eff': 60, 'failed/truncated/no_usage': 0, 'attempts-requests': 0, 'non-200': 0, 'events': 360, 'rule-tagged bids': 0, 'walk-aways': 0}

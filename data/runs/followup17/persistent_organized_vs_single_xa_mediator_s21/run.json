@@ -1,0 +1,137 @@
+{
+  "status": "complete",
+  "error": null,
+  "started_at": "2026-10-17T03:20:28+00:00",
+  "finished_at": "2026-10-17T03:27:35+00:00",
+  "usage": {
+    "requests": 65,
+    "failed_requests": 0,
+    "prompt_tokens": 253423,
+    "completion_tokens": 66146,
+    "largest_completion_tokens": 4176,
+    "truncated": 0,
+    "no_usage": 0,
+    "finish_reasons": {
+      "stop": 65
+    },
+    "http_attempts": 95,
+    "http_responses": {
+      "200": 65,
+      "429": 30
+    },
+    "by_agent": {
+      "analyst": {
+        "requests": 5,
+        "failed_requests": 0,
+        "prompt_tokens": 11170,
+        "completion_tokens": 16017,
+        "largest_completion_tokens": 4176,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 5
+        }
+      },
+      "bidder_organized": {
+        "requests": 18,
+        "failed_requests": 0,
+        "prompt_tokens": 47841,
+        "completion_tokens": 11201,
+        "largest_completion_tokens": 1400,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 18
+        }
+      },
+      "bidder_single": {
+        "requests": 18,
+        "failed_requests": 0,
+        "prompt_tokens": 46942,
+        "completion_tokens": 17614,
+        "largest_completion_tokens": 1536,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 18
+        }
+      },
+      "mediator": {
+        "requests": 24,
+        "failed_requests": 0,
+        "prompt_tokens": 147470,
+        "completion_tokens": 21314,
+        "largest_completion_tokens": 1303,
+        "truncated": 0,
+        "no_usage": 0,
+        "finish_reasons": {
+          "stop": 24
+        }
+      }
+    }
+  },
+  "argv": [
+    "--backend",
+    "openai",
+    "--hosted",
+    "--default-sampling",
+    "--no-tools",
+    "--base-url",
+    "https://api.anthropic.com/v1/",
+    "--model",
+    "claude-haiku-5-5",
+    "--max-tokens",
+    "16000",
+    "--max-retries",
+    "30",
+    "--timeout",
+    "300",
+    "--prompts",
+    "primitives",
+    "--events",
+    "6",
+    "--rounds",
+    "3",
+    "--environment",
+    "persistent",
+    "--institutions",
+    "mediator",
+    "--mixed",
+    "organized:single",
+    "--seeds",
+    "21",
+    "--out",
+    "outputs/followup17/persistent_organized_vs_single_xa_mediator_s21"
+  ],
+  "backend": "openai",
+  "model": "claude-haiku-5-5",
+  "base_url": "https://api.anthropic.com/v1/",
+  "hosted": true,
+  "default_sampling": true,
+  "max_tokens": 16000,
+  "max_retries": 30,
+  "timeout": 300,
+  "no_tools": true,
+  "institutions": [
+    "mediator"
+  ],
+  "organizations": null,
+  "mixed": [
+    "organized:single"
+  ],
+  "prompts": "primitives",
+  "environment": "persistent",
+  "events": 6,
+  "rounds": 3,
+  "max_history_events": 0,
+  "seeds": [
+    21
+  ],
+  "debug_log": null,
+  "git_commit": "9f1cf25aecb0ebb02dcafb7cd46a2d2844208083",
+  "git_dirty": false,
+  "source_sha256": "46258eff7f4a97117cc9b4bfb10693be0c7d45ffab3ebd23aaec8d71c142143a",
+  "python": "3.14.3",
+  "numpy": "2.4.2",
+  "openai": "2.26.0"
+}
